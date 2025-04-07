@@ -1,0 +1,469 @@
+{
+    "prompt": [
+        {
+            "content": "Your are an expert in machine learning and natural language processing. You need to analyze papers.\n",
+            "role": "system"
+        },
+        {
+            "content": "Here's a paper CTRL: A Conditional Transformer Language Model for Controllable Generation\n\nLarge-scale language models show promising text generation capabilities, but users cannot easily control particular aspects of the generated text. We release CTRL, a 1.63 billion-parameter conditional transformer language model, trained to condition on control codes that govern style, content, and task-specific behavior. Control codes were derived from structure that naturally co-occurs with raw text, preserving the advantages of unsupervised learning while providing more explicit control over text generation. These codes also allow CTRL to predict which parts of the training data are most likely given a sequence. This provides a potential method for analyzing large amounts of data via model-based source attribution. We have released multiple full-sized, pretrained versions of CTRL at this https URL.\n\nSuppose someone is trying to remember this paper but only remembered parts of it. What parts do you think would be salient, and what queries would the user put into the search engine? What about asking a colleague? Would they ask different queries to a human than a search engine? \n\nList your answer in two sections:\n<search_engine></search_engine> for search engine queries\n<human></human> for queries to a human colleague\n",
+            "role": "user"
+        }
+    ],
+    "responses": [
+        "## Search Engine\nThe user might search for the following queries to recall the paper:\n- \"conditional transformer language model\"\n- \"large-scale language model for controllable generation\"\n- \"CTRL language model\"\n- \"1.63 billion-parameter language model\"\n- \"control codes for text generation\"\n- \"language model for style and content control\"\n- \"model-based source attribution\"\n\n## Human\nWhen asking a colleague, the user might phrase their queries differently, focusing more on the context and the key aspects of the paper:\n- \"Do you remember that paper about a large language model that can be controlled for different styles and content?\"\n- \"What's the name of the conditional transformer model that was released for controllable text generation?\"\n- \"I'm trying to recall a paper about a huge language model, over a billion parameters, that used control codes for generation. Does that sound familiar?\"\n- \"Have you heard about a model that can predict the source of text based on its generation?\"\n- \"Is there a well-known language model that allows for task-specific behavior control?\"\n- \"Do you know of any recent papers on controllable language generation using transformer models?\""
+    ],
+    "example": {
+        "prompt": [
+            {
+                "content": "Your are an expert in machine learning and natural language processing. You need to analyze papers.\n",
+                "role": "system"
+            },
+            {
+                "content": "Here's a paper CTRL: A Conditional Transformer Language Model for Controllable Generation\n\nLarge-scale language models show promising text generation capabilities, but users cannot easily control particular aspects of the generated text. We release CTRL, a 1.63 billion-parameter conditional transformer language model, trained to condition on control codes that govern style, content, and task-specific behavior. Control codes were derived from structure that naturally co-occurs with raw text, preserving the advantages of unsupervised learning while providing more explicit control over text generation. These codes also allow CTRL to predict which parts of the training data are most likely given a sequence. This provides a potential method for analyzing large amounts of data via model-based source attribution. We have released multiple full-sized, pretrained versions of CTRL at this https URL.\n\nSuppose someone is trying to remember this paper but only remembered parts of it. What parts do you think would be salient, and what queries would the user put into the search engine? What about asking a colleague? Would they ask different queries to a human than a search engine? \n\nList your answer in two sections:\n<search_engine></search_engine> for search engine queries\n<human></human> for queries to a human colleague\n",
+                "role": "user"
+            }
+        ],
+        "paper": {
+            "added": "2019-09-16T01:01:08.354Z",
+            "created": "2019-09-11T00:00:00.000Z",
+            "id": "202573071",
+            "metadata": {
+                "abstract": "Large-scale language models show promising text generation capabilities, but users cannot easily control particular aspects of the generated text. We release CTRL, a 1.63 billion-parameter conditional transformer language model, trained to condition on control codes that govern style, content, and task-specific behavior. Control codes were derived from structure that naturally co-occurs with raw text, preserving the advantages of unsupervised learning while providing more explicit control over text generation. These codes also allow CTRL to predict which parts of the training data are most likely given a sequence. This provides a potential method for analyzing large amounts of data via model-based source attribution. We have released multiple full-sized, pretrained versions of CTRL at this https URL.",
+                "abstract_count": 115,
+                "abstract_language": "en",
+                "abstract_perplexity": -14.41023262397634,
+                "extfieldsofstudy": [
+                    "Computer Science"
+                ],
+                "provenance": "pes2o_v2-0000.json.gz:3158979",
+                "s2fieldsofstudy": [
+                    "Computer Science"
+                ],
+                "sha1": "75acc731bdd2b626edc74672a30da3bc51010ae8",
+                "sources": [
+                    "ScienceParsePlus",
+                    "ScienceParseMerged",
+                    "DBLP",
+                    "Anansi",
+                    "MergedPDFExtraction",
+                    "ArXiv",
+                    "MAG"
+                ],
+                "title": "CTRL: A Conditional Transformer Language Model for Controllable Generation",
+                "title_count": 9,
+                "title_language": "en",
+                "title_perplexity": -15.1639966487234,
+                "top_frequencies": [
+                    {
+                        "count": 5,
+                        "token": "of"
+                    },
+                    {
+                        "count": 3,
+                        "token": "control"
+                    },
+                    {
+                        "count": 3,
+                        "token": "the"
+                    },
+                    {
+                        "count": 3,
+                        "token": "a"
+                    },
+                    {
+                        "count": 3,
+                        "token": "codes"
+                    },
+                    {
+                        "count": 2,
+                        "token": "for"
+                    },
+                    {
+                        "count": 2,
+                        "token": "language"
+                    },
+                    {
+                        "count": 2,
+                        "token": "text"
+                    },
+                    {
+                        "count": 2,
+                        "token": "We"
+                    },
+                    {
+                        "count": 2,
+                        "token": "to"
+                    },
+                    {
+                        "count": 2,
+                        "token": "that"
+                    },
+                    {
+                        "count": 2,
+                        "token": "CTRL"
+                    },
+                    {
+                        "count": 2,
+                        "token": "data"
+                    },
+                    {
+                        "count": 1,
+                        "token": "CTRL:"
+                    },
+                    {
+                        "count": 1,
+                        "token": "A"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Conditional"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Transformer"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Language"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Model"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Controllable"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Generation"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Large-scale"
+                    },
+                    {
+                        "count": 1,
+                        "token": "models"
+                    },
+                    {
+                        "count": 1,
+                        "token": "show"
+                    },
+                    {
+                        "count": 1,
+                        "token": "promising"
+                    },
+                    {
+                        "count": 1,
+                        "token": "generation"
+                    },
+                    {
+                        "count": 1,
+                        "token": "capabilities,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "but"
+                    },
+                    {
+                        "count": 1,
+                        "token": "users"
+                    },
+                    {
+                        "count": 1,
+                        "token": "cannot"
+                    },
+                    {
+                        "count": 1,
+                        "token": "easily"
+                    },
+                    {
+                        "count": 1,
+                        "token": "particular"
+                    },
+                    {
+                        "count": 1,
+                        "token": "aspects"
+                    },
+                    {
+                        "count": 1,
+                        "token": "generated"
+                    },
+                    {
+                        "count": 1,
+                        "token": "text."
+                    },
+                    {
+                        "count": 1,
+                        "token": "release"
+                    },
+                    {
+                        "count": 1,
+                        "token": "CTRL,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "1.63"
+                    },
+                    {
+                        "count": 1,
+                        "token": "billion-parameter"
+                    },
+                    {
+                        "count": 1,
+                        "token": "conditional"
+                    },
+                    {
+                        "count": 1,
+                        "token": "transformer"
+                    },
+                    {
+                        "count": 1,
+                        "token": "model,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "trained"
+                    },
+                    {
+                        "count": 1,
+                        "token": "condition"
+                    },
+                    {
+                        "count": 1,
+                        "token": "on"
+                    },
+                    {
+                        "count": 1,
+                        "token": "govern"
+                    },
+                    {
+                        "count": 1,
+                        "token": "style,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "content,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "and"
+                    },
+                    {
+                        "count": 1,
+                        "token": "task-specific"
+                    },
+                    {
+                        "count": 1,
+                        "token": "behavior."
+                    },
+                    {
+                        "count": 1,
+                        "token": "Control"
+                    },
+                    {
+                        "count": 1,
+                        "token": "were"
+                    },
+                    {
+                        "count": 1,
+                        "token": "derived"
+                    },
+                    {
+                        "count": 1,
+                        "token": "from"
+                    },
+                    {
+                        "count": 1,
+                        "token": "structure"
+                    },
+                    {
+                        "count": 1,
+                        "token": "naturally"
+                    },
+                    {
+                        "count": 1,
+                        "token": "co-occurs"
+                    },
+                    {
+                        "count": 1,
+                        "token": "with"
+                    },
+                    {
+                        "count": 1,
+                        "token": "raw"
+                    },
+                    {
+                        "count": 1,
+                        "token": "text,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "preserving"
+                    },
+                    {
+                        "count": 1,
+                        "token": "advantages"
+                    },
+                    {
+                        "count": 1,
+                        "token": "unsupervised"
+                    },
+                    {
+                        "count": 1,
+                        "token": "learning"
+                    },
+                    {
+                        "count": 1,
+                        "token": "while"
+                    },
+                    {
+                        "count": 1,
+                        "token": "providing"
+                    },
+                    {
+                        "count": 1,
+                        "token": "more"
+                    },
+                    {
+                        "count": 1,
+                        "token": "explicit"
+                    },
+                    {
+                        "count": 1,
+                        "token": "over"
+                    },
+                    {
+                        "count": 1,
+                        "token": "generation."
+                    },
+                    {
+                        "count": 1,
+                        "token": "These"
+                    },
+                    {
+                        "count": 1,
+                        "token": "also"
+                    },
+                    {
+                        "count": 1,
+                        "token": "allow"
+                    },
+                    {
+                        "count": 1,
+                        "token": "predict"
+                    },
+                    {
+                        "count": 1,
+                        "token": "which"
+                    },
+                    {
+                        "count": 1,
+                        "token": "parts"
+                    },
+                    {
+                        "count": 1,
+                        "token": "training"
+                    },
+                    {
+                        "count": 1,
+                        "token": "are"
+                    },
+                    {
+                        "count": 1,
+                        "token": "most"
+                    },
+                    {
+                        "count": 1,
+                        "token": "likely"
+                    },
+                    {
+                        "count": 1,
+                        "token": "given"
+                    },
+                    {
+                        "count": 1,
+                        "token": "sequence."
+                    },
+                    {
+                        "count": 1,
+                        "token": "This"
+                    },
+                    {
+                        "count": 1,
+                        "token": "provides"
+                    },
+                    {
+                        "count": 1,
+                        "token": "potential"
+                    },
+                    {
+                        "count": 1,
+                        "token": "method"
+                    },
+                    {
+                        "count": 1,
+                        "token": "analyzing"
+                    },
+                    {
+                        "count": 1,
+                        "token": "large"
+                    },
+                    {
+                        "count": 1,
+                        "token": "amounts"
+                    },
+                    {
+                        "count": 1,
+                        "token": "via"
+                    },
+                    {
+                        "count": 1,
+                        "token": "model-based"
+                    },
+                    {
+                        "count": 1,
+                        "token": "source"
+                    },
+                    {
+                        "count": 1,
+                        "token": "attribution."
+                    },
+                    {
+                        "count": 1,
+                        "token": "have"
+                    },
+                    {
+                        "count": 1,
+                        "token": "released"
+                    },
+                    {
+                        "count": 1,
+                        "token": "multiple"
+                    },
+                    {
+                        "count": 1,
+                        "token": "full-sized,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "pretrained"
+                    },
+                    {
+                        "count": 1,
+                        "token": "versions"
+                    }
+                ],
+                "year": 2019
+            },
+            "source": "s2",
+            "text": "CTRL: A Conditional Transformer Language Model for Controllable Generation\n\nLarge-scale language models show promising text generation capabilities, but users cannot easily control particular aspects of the generated text. We release CTRL, a 1.63 billion-parameter conditional transformer language model, trained to condition on control codes that govern style, content, and task-specific behavior. Control codes were derived from structure that naturally co-occurs with raw text, preserving the advantages of unsupervised learning while providing more explicit control over text generation. These codes also allow CTRL to predict which parts of the training data are most likely given a sequence. This provides a potential method for analyzing large amounts of data via model-based source attribution. We have released multiple full-sized, pretrained versions of CTRL at this https URL.",
+            "version": "v3-fos"
+        },
+        "meta": {
+            "id": 202573071,
+            "title": "CTRL: A Conditional Transformer Language Model for Controllable Generation"
+        }
+    }
+}

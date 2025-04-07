@@ -15,7 +15,7 @@ default_index_path = os.path.join(
 class Pes2oLookup(Lookup):
 
     def __init__(self, pes2o_path=default_pes2o_path, index_path=default_index_path, lazy=True):
-        indices = load_dataset('parquet', data_files=default_index_path).to_list()
+        indices = load_dataset('parquet', data_files=default_index_path)['train'].to_list()
         pes2o_lookup = {}
         for row in indices:
             file = row['file']
@@ -34,7 +34,7 @@ class Pes2oLookup(Lookup):
         self.pes2o_path = pes2o_path
         self.index_path = index_path
 
-    def get_paper(self, id):
+    def get_doc(self, id):
         file, idx = self.pes2o_lookup[id]
         if file not in self.dats:
             self.dats[file] = load_dataset('json', data_files=os.path.join(self.pes2o_path, file), split='train')

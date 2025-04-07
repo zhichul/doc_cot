@@ -1,0 +1,448 @@
+{
+    "prompt": [
+        {
+            "content": "Your are an expert in machine learning and natural language processing. You need to analyze papers.\n",
+            "role": "system"
+        },
+        {
+            "content": "Here's a paper Distributional Reinforcement Learning for Energy-Based Sequential Models\n\nGlobal Autoregressive Models (GAMs) are a recent proposal [Parshakova et al., CoNLL 2019] for exploiting global properties of sequences for data-efficient learning of seq2seq models. In the first phase of training, an Energy-Based model (EBM) over sequences is derived. This EBM has high representational power, but is unnormalized and cannot be directly exploited for sampling. To address this issue [Parshakova et al., CoNLL 2019] proposes a distillation technique, which can only be applied under limited conditions. By relating this problem to Policy Gradient techniques in RL, but in a \\emph{distributional} rather than \\emph{optimization} perspective, we propose a general approach applicable to any sequential EBM. Its effectiveness is illustrated on GAM-based experiments.\n\nSuppose someone is trying to remember this paper but only remembered parts of it. What parts do you think would be salient, and what queries would the user put into the search engine? What about asking a colleague? Would they ask different queries to a human than a search engine? \n\nList your answer in two sections:\n<search_engine></search_engine> for search engine queries\n<human></human> for queries to a human colleague\n",
+            "role": "user"
+        }
+    ],
+    "responses": [
+        "## Search Engine\nThe user might remember key phrases or concepts from the paper, such as \"Distributional Reinforcement Learning\", \"Energy-Based Sequential Models\", \"Global Autoregressive Models\", or \"seq2seq models\". They might also recall the problem of unnormalized Energy-Based models and the proposed solution. Possible search engine queries could be:\n- \"Distributional Reinforcement Learning for Energy-Based models\"\n- \"Global Autoregressive Models seq2seq\"\n- \"Energy-Based Sequential Models training\"\n- \"Unnormalized Energy-Based models sampling\"\n- \"Seq2seq models data-efficient learning\"\n\n## Human\nWhen asking a colleague, the user might frame their queries in a more conversational and less specific manner, relying on the colleague's ability to understand the context and provide relevant information. Possible queries to a human colleague could be:\n- \"Do you remember that paper about using reinforcement learning for sequence models?\"\n- \"I'm trying to recall a paper that talked about improving seq2seq models with a specific type of energy-based model.\"\n- \"Have you come across any work on making energy-based models more practical for sequence generation?\"\n- \"What was the name of that technique for dealing with unnormalized models in sequence tasks?\"\n- \"Do you know of any research that applies distributional reinforcement learning to sequential data?\""
+    ],
+    "example": {
+        "prompt": [
+            {
+                "content": "Your are an expert in machine learning and natural language processing. You need to analyze papers.\n",
+                "role": "system"
+            },
+            {
+                "content": "Here's a paper Distributional Reinforcement Learning for Energy-Based Sequential Models\n\nGlobal Autoregressive Models (GAMs) are a recent proposal [Parshakova et al., CoNLL 2019] for exploiting global properties of sequences for data-efficient learning of seq2seq models. In the first phase of training, an Energy-Based model (EBM) over sequences is derived. This EBM has high representational power, but is unnormalized and cannot be directly exploited for sampling. To address this issue [Parshakova et al., CoNLL 2019] proposes a distillation technique, which can only be applied under limited conditions. By relating this problem to Policy Gradient techniques in RL, but in a \\emph{distributional} rather than \\emph{optimization} perspective, we propose a general approach applicable to any sequential EBM. Its effectiveness is illustrated on GAM-based experiments.\n\nSuppose someone is trying to remember this paper but only remembered parts of it. What parts do you think would be salient, and what queries would the user put into the search engine? What about asking a colleague? Would they ask different queries to a human than a search engine? \n\nList your answer in two sections:\n<search_engine></search_engine> for search engine queries\n<human></human> for queries to a human colleague\n",
+                "role": "user"
+            }
+        ],
+        "paper": {
+            "added": "2019-12-18T11:05:27.000Z",
+            "created": "2019-12-18T00:00:00.000Z",
+            "id": "209405007",
+            "metadata": {
+                "abstract": "Global Autoregressive Models (GAMs) are a recent proposal [Parshakova et al., CoNLL 2019] for exploiting global properties of sequences for data-efficient learning of seq2seq models. In the first phase of training, an Energy-Based model (EBM) over sequences is derived. This EBM has high representational power, but is unnormalized and cannot be directly exploited for sampling. To address this issue [Parshakova et al., CoNLL 2019] proposes a distillation technique, which can only be applied under limited conditions. By relating this problem to Policy Gradient techniques in RL, but in a \\emph{distributional} rather than \\emph{optimization} perspective, we propose a general approach applicable to any sequential EBM. Its effectiveness is illustrated on GAM-based experiments.",
+                "abstract_count": 111,
+                "abstract_language": "en",
+                "abstract_perplexity": -16.642150167675073,
+                "extfieldsofstudy": [
+                    "Computer Science",
+                    "Mathematics"
+                ],
+                "provenance": "pes2o_v2-0005.json.gz:3300529",
+                "s2fieldsofstudy": [
+                    "Computer Science"
+                ],
+                "sha1": "3f8af4ad61f68c0c884fac71f98369863ebf5ed4",
+                "sources": [
+                    "Anansi",
+                    "ArXiv",
+                    "MergedPDFExtraction",
+                    "DBLP",
+                    "MAG"
+                ],
+                "title": "Distributional Reinforcement Learning for Energy-Based Sequential Models",
+                "title_count": 7,
+                "title_language": "en",
+                "title_perplexity": -15.672100293741185,
+                "top_frequencies": [
+                    {
+                        "count": 4,
+                        "token": "for"
+                    },
+                    {
+                        "count": 4,
+                        "token": "a"
+                    },
+                    {
+                        "count": 3,
+                        "token": "of"
+                    },
+                    {
+                        "count": 3,
+                        "token": "is"
+                    },
+                    {
+                        "count": 2,
+                        "token": "Energy-Based"
+                    },
+                    {
+                        "count": 2,
+                        "token": "Models"
+                    },
+                    {
+                        "count": 2,
+                        "token": "[Parshakova"
+                    },
+                    {
+                        "count": 2,
+                        "token": "et"
+                    },
+                    {
+                        "count": 2,
+                        "token": "al.,"
+                    },
+                    {
+                        "count": 2,
+                        "token": "CoNLL"
+                    },
+                    {
+                        "count": 2,
+                        "token": "2019]"
+                    },
+                    {
+                        "count": 2,
+                        "token": "sequences"
+                    },
+                    {
+                        "count": 2,
+                        "token": "but"
+                    },
+                    {
+                        "count": 2,
+                        "token": "be"
+                    },
+                    {
+                        "count": 2,
+                        "token": "this"
+                    },
+                    {
+                        "count": 2,
+                        "token": "to"
+                    },
+                    {
+                        "count": 2,
+                        "token": "in"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Distributional"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Reinforcement"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Learning"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Sequential"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Global"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Autoregressive"
+                    },
+                    {
+                        "count": 1,
+                        "token": "(GAMs)"
+                    },
+                    {
+                        "count": 1,
+                        "token": "are"
+                    },
+                    {
+                        "count": 1,
+                        "token": "recent"
+                    },
+                    {
+                        "count": 1,
+                        "token": "proposal"
+                    },
+                    {
+                        "count": 1,
+                        "token": "exploiting"
+                    },
+                    {
+                        "count": 1,
+                        "token": "global"
+                    },
+                    {
+                        "count": 1,
+                        "token": "properties"
+                    },
+                    {
+                        "count": 1,
+                        "token": "data-efficient"
+                    },
+                    {
+                        "count": 1,
+                        "token": "learning"
+                    },
+                    {
+                        "count": 1,
+                        "token": "seq2seq"
+                    },
+                    {
+                        "count": 1,
+                        "token": "models."
+                    },
+                    {
+                        "count": 1,
+                        "token": "In"
+                    },
+                    {
+                        "count": 1,
+                        "token": "the"
+                    },
+                    {
+                        "count": 1,
+                        "token": "first"
+                    },
+                    {
+                        "count": 1,
+                        "token": "phase"
+                    },
+                    {
+                        "count": 1,
+                        "token": "training,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "an"
+                    },
+                    {
+                        "count": 1,
+                        "token": "model"
+                    },
+                    {
+                        "count": 1,
+                        "token": "(EBM)"
+                    },
+                    {
+                        "count": 1,
+                        "token": "over"
+                    },
+                    {
+                        "count": 1,
+                        "token": "derived."
+                    },
+                    {
+                        "count": 1,
+                        "token": "This"
+                    },
+                    {
+                        "count": 1,
+                        "token": "EBM"
+                    },
+                    {
+                        "count": 1,
+                        "token": "has"
+                    },
+                    {
+                        "count": 1,
+                        "token": "high"
+                    },
+                    {
+                        "count": 1,
+                        "token": "representational"
+                    },
+                    {
+                        "count": 1,
+                        "token": "power,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "unnormalized"
+                    },
+                    {
+                        "count": 1,
+                        "token": "and"
+                    },
+                    {
+                        "count": 1,
+                        "token": "cannot"
+                    },
+                    {
+                        "count": 1,
+                        "token": "directly"
+                    },
+                    {
+                        "count": 1,
+                        "token": "exploited"
+                    },
+                    {
+                        "count": 1,
+                        "token": "sampling."
+                    },
+                    {
+                        "count": 1,
+                        "token": "To"
+                    },
+                    {
+                        "count": 1,
+                        "token": "address"
+                    },
+                    {
+                        "count": 1,
+                        "token": "issue"
+                    },
+                    {
+                        "count": 1,
+                        "token": "proposes"
+                    },
+                    {
+                        "count": 1,
+                        "token": "distillation"
+                    },
+                    {
+                        "count": 1,
+                        "token": "technique,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "which"
+                    },
+                    {
+                        "count": 1,
+                        "token": "can"
+                    },
+                    {
+                        "count": 1,
+                        "token": "only"
+                    },
+                    {
+                        "count": 1,
+                        "token": "applied"
+                    },
+                    {
+                        "count": 1,
+                        "token": "under"
+                    },
+                    {
+                        "count": 1,
+                        "token": "limited"
+                    },
+                    {
+                        "count": 1,
+                        "token": "conditions."
+                    },
+                    {
+                        "count": 1,
+                        "token": "By"
+                    },
+                    {
+                        "count": 1,
+                        "token": "relating"
+                    },
+                    {
+                        "count": 1,
+                        "token": "problem"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Policy"
+                    },
+                    {
+                        "count": 1,
+                        "token": "Gradient"
+                    },
+                    {
+                        "count": 1,
+                        "token": "techniques"
+                    },
+                    {
+                        "count": 1,
+                        "token": "RL,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "\\emph{distributional}"
+                    },
+                    {
+                        "count": 1,
+                        "token": "rather"
+                    },
+                    {
+                        "count": 1,
+                        "token": "than"
+                    },
+                    {
+                        "count": 1,
+                        "token": "\\emph{optimization}"
+                    },
+                    {
+                        "count": 1,
+                        "token": "perspective,"
+                    },
+                    {
+                        "count": 1,
+                        "token": "we"
+                    },
+                    {
+                        "count": 1,
+                        "token": "propose"
+                    },
+                    {
+                        "count": 1,
+                        "token": "general"
+                    },
+                    {
+                        "count": 1,
+                        "token": "approach"
+                    },
+                    {
+                        "count": 1,
+                        "token": "applicable"
+                    },
+                    {
+                        "count": 1,
+                        "token": "any"
+                    },
+                    {
+                        "count": 1,
+                        "token": "sequential"
+                    },
+                    {
+                        "count": 1,
+                        "token": "EBM."
+                    },
+                    {
+                        "count": 1,
+                        "token": "Its"
+                    },
+                    {
+                        "count": 1,
+                        "token": "effectiveness"
+                    },
+                    {
+                        "count": 1,
+                        "token": "illustrated"
+                    },
+                    {
+                        "count": 1,
+                        "token": "on"
+                    },
+                    {
+                        "count": 1,
+                        "token": "GAM-based"
+                    },
+                    {
+                        "count": 1,
+                        "token": "experiments."
+                    }
+                ],
+                "year": 2019
+            },
+            "source": "s2",
+            "text": "Distributional Reinforcement Learning for Energy-Based Sequential Models\n\nGlobal Autoregressive Models (GAMs) are a recent proposal [Parshakova et al., CoNLL 2019] for exploiting global properties of sequences for data-efficient learning of seq2seq models. In the first phase of training, an Energy-Based model (EBM) over sequences is derived. This EBM has high representational power, but is unnormalized and cannot be directly exploited for sampling. To address this issue [Parshakova et al., CoNLL 2019] proposes a distillation technique, which can only be applied under limited conditions. By relating this problem to Policy Gradient techniques in RL, but in a \\emph{distributional} rather than \\emph{optimization} perspective, we propose a general approach applicable to any sequential EBM. Its effectiveness is illustrated on GAM-based experiments.",
+            "version": "v3-fos"
+        },
+        "meta": {
+            "id": 209405007,
+            "title": "Distributional Reinforcement Learning for Energy-Based Sequential Models"
+        }
+    }
+}

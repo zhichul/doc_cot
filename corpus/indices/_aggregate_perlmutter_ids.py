@@ -14,5 +14,5 @@ for file_path in tqdm.tqdm(input_dir.glob('pes2o-*.ids')):
         for line in f:
             cid = int(line)
             cids.append(cid)
-    index.append({"file": data_name, "corpus_ids": line.rstrip("\n")})
+    index.append({"file": data_name, "corpus_ids": cids})
 Dataset.from_list(index).to_parquet(output_file)
