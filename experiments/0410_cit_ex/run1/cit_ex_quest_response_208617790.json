@@ -1,0 +1,29 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation, which allows specifying both pointwise and distributional constraints on the target language model. The cited paper, 'Plug and Play Language Models: A Simple Approach to Controlled Text Generation' by Dathathri et al. (2020), uses a plug-and-play approach to combine a pre-trained language model with a simple attribute classifier to control text generation. The citance mentions the use of a KL penalty in the cited paper, which is also a key component in the current paper. This suggests that both papers explore methods for controlling text generation, but with different approaches. The questions that can be asked of papers and have identical answers for both papers are likely to be related to the general topic of controlled text generation, language models, and evaluation metrics.",
+    "questions": [
+        {
+            "question": "What is the main goal of controlled text generation?",
+            "score": "1",
+            "rationale": "Both papers aim to control the output of language models to satisfy certain constraints or attributes, but they differ in their approaches. This question is too generic and many other papers would also have the same answer.",
+            "answer": "The main goal of controlled text generation is to generate text that satisfies certain constraints or attributes, such as topic, sentiment, or style."
+        },
+        {
+            "question": "What is the role of KL divergence in controlled text generation?",
+            "score": "2",
+            "rationale": "Both papers use KL divergence as a key component, either as a penalty term or as a measure of divergence between the target and original distributions. This question touches on the core of the relationship between the two papers and is unlikely to have the same answer for many other papers.",
+            "answer": "KL divergence plays a crucial role in controlled text generation, either as a penalty term to prevent degeneration or as a measure of divergence between the target and original distributions."
+        },
+        {
+            "question": "How do language models handle pointwise and distributional constraints?",
+            "score": "1",
+            "rationale": "Both papers discuss handling pointwise and distributional constraints, but they differ in their approaches. This question is too generic and many other papers would also have the same answer.",
+            "answer": "Language models can handle pointwise and distributional constraints using various methods, such as supervised fine-tuning, reinforcement learning, or plug-and-play approaches."
+        },
+        {
+            "question": "What are the evaluation metrics used for controlled text generation?",
+            "score": "1",
+            "rationale": "Both papers use evaluation metrics such as perplexity, fluency, and diversity to assess the quality of generated text. This question is too generic and many other papers would also have the same answer.",
+            "answer": "Common evaluation metrics for controlled text generation include perplexity, fluency, diversity, and attribute-specific metrics such as sentiment accuracy or topic relevance."
+        }
+    ]
+}

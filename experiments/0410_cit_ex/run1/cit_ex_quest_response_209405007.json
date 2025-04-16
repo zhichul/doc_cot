@@ -1,0 +1,35 @@
+{
+    "thought_process": "The CURRENT PAPER proposes a Distributional Approach for controlled text generation, which allows for both pointwise and distributional constraints. The CITED PAPER discusses a related approach for energy-based sequential models, also using a Distributional Reinforcement Learning perspective. The CITANCE specifically mentions the DPG algorithm from the CITED PAPER as an inspiration for the CURRENT PAPER's KL-adaptive version of the DPG algorithm. This suggests that both papers are working on similar problems, but with different focuses and applications. Therefore, questions that can be asked of papers that would have identical answers for both the CURRENT PAPER and the CITED PAPER might include those related to the use of energy-based models, distributional reinforcement learning, and the DPG algorithm.",
+    "questions": [
+        {
+            "question": "What type of models are used in the paper for sequential data?",
+            "score": "2",
+            "rationale": "Both papers use energy-based models for sequential data, which suggests a strong connection between the two papers.",
+            "answer": "Energy-Based Models"
+        },
+        {
+            "question": "What reinforcement learning perspective is used in the paper?",
+            "score": "2",
+            "rationale": "Both papers use a distributional reinforcement learning perspective, which is a key aspect of their approaches.",
+            "answer": "Distributional Reinforcement Learning"
+        },
+        {
+            "question": "What algorithm is used for training the policy?",
+            "score": "2",
+            "rationale": "Both papers mention the DPG algorithm, which is a key component of their approaches.",
+            "answer": "DPG algorithm"
+        },
+        {
+            "question": "What is the main application of the paper?",
+            "score": "0",
+            "rationale": "The CURRENT PAPER focuses on controlled text generation, while the CITED PAPER focuses on energy-based sequential models. This is a key difference between the two papers.",
+            "answer": "N/A"
+        },
+        {
+            "question": "What type of constraints are used in the paper?",
+            "score": "1",
+            "rationale": "While both papers use constraints, the CURRENT PAPER specifically mentions pointwise and distributional constraints, while the CITED PAPER does not. However, the question is still somewhat relevant to both papers.",
+            "answer": "Constraints"
+        }
+    ]
+}

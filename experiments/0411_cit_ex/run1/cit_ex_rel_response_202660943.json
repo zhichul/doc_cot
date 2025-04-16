@@ -1,0 +1,25 @@
+{
+    "thought_process": "The current paper and the cited paper both deal with the concept of fine-tuning language models to achieve specific goals, such as controlled text generation and stylistic continuation. The current paper proposes a distributional approach to controlled text generation, while the cited paper focuses on fine-tuning language models from human preferences. Both papers aim to improve the performance of language models in certain tasks by incorporating constraints or rewards. The citance mentions the use of a KL penalty to discourage large deviations from the original language model, which is a concept also relevant to the current paper.",
+    "connections": [
+        {
+            "connection": "Both papers focus on fine-tuning language models to achieve specific goals, such as controlled text generation and stylistic continuation.",
+            "score": "1",
+            "rationale": "This connection is superficial as many papers in the field of natural language processing deal with fine-tuning language models for various tasks."
+        },
+        {
+            "connection": "The current paper and the cited paper both use constraints or rewards to improve the performance of language models.",
+            "score": "1",
+            "rationale": "This connection is also superficial as the use of constraints or rewards is a common technique in many machine learning applications, not just limited to these two papers."
+        },
+        {
+            "connection": "The concept of a KL penalty is used in both papers to discourage large deviations from the original language model.",
+            "score": "2",
+            "rationale": "This connection is more significant as it shows a specific technique used in both papers to achieve their goals, demonstrating a deeper relationship between the two works."
+        },
+        {
+            "connection": "Both papers aim to balance the trade-off between achieving specific goals and maintaining the quality of the generated text.",
+            "score": "2",
+            "rationale": "This connection touches the core of the relationship between the two papers, as they both deal with the challenge of balancing competing objectives in language model fine-tuning."
+        }
+    ]
+}

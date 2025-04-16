@@ -1,0 +1,47 @@
+{
+    "thought_process": "The CURRENT PAPER proposes a novel approach to controlled text generation, which combines a distributional view with a divergence minimization objective. This approach allows for specifying both pointwise and distributional constraints over the target language model, providing a more general framework than previous methods. The authors draw inspiration from Information Geometry and Energy-Based Models (EBMs) to derive an optimal target distribution, which is then approximated using an autoregressive policy. The methodology builds upon previous ideas, such as Reinforcement Learning (RL) and KL divergence penalty, but introduces a new perspective on controlled text generation. The authors also provide an extensive evaluation of their approach, including experiments on pointwise and distributional constraints, as well as comparisons to other state-of-the-art methods.",
+    "citances": [
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ranzato et al., 2016)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Jaques et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ziegler et al., 2019)"
+            }
+        },
+        {
+            "context": "The optimal target distribution is then uniquely determined as an explicit EBM (Energy-Based Model) representation, following Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018;Amari & Nagaoka, 2000).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Csisz\u00e1r & Shields, 2004)"
+            }
+        },
+        {
+            "context": "The optimal target distribution is then uniquely determined as an explicit EBM (Energy-Based Model) representation, following Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018;Amari & Nagaoka, 2000).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Nielsen, 2018)"
+            }
+        },
+        {
+            "context": "The optimal target distribution is then uniquely determined as an explicit EBM (Energy-Based Model) representation, following Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018;Amari & Nagaoka, 2000).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Amari & Nagaoka, 2000)"
+            }
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "thought_process": "The current paper and the cited paper are related in the sense that they both deal with fine-tuning language models to achieve specific goals. The current paper proposes a distributional approach to controlled text generation, while the cited paper discusses fine-tuning language models from human preferences. The citance mentions conservative fine-tuning approaches that use a KL penalty to discourage large deviations from the original language model, which is similar to the current paper's goal of minimizing KL divergence from the initial language model distribution. This suggests that both papers are concerned with balancing the need to adapt a language model to a new task or preference with the need to preserve the model's original characteristics.",
+    "connections": [
+        {
+            "connection": "Both papers aim to fine-tune language models to achieve specific goals, such as controlled text generation or alignment with human preferences.",
+            "score": "1",
+            "rationale": "This connection is superficial because it only identifies a general similarity in the papers' goals, without delving into the specific methods or techniques used to achieve those goals."
+        },
+        {
+            "connection": "The use of KL divergence as a penalty term is a common technique in both papers, indicating a shared concern with preserving the original language model's characteristics while adapting it to new tasks or preferences.",
+            "score": "2",
+            "rationale": "This connection is more substantial because it identifies a specific technical similarity between the two papers, namely the use of KL divergence as a penalty term. This suggests that the authors of both papers are aware of the importance of balancing adaptation and preservation in language model fine-tuning."
+        },
+        {
+            "connection": "Both papers recognize the importance of balancing the need to adapt a language model to a new task or preference with the need to preserve the model's original characteristics, such as fluency and coherence.",
+            "score": "2",
+            "rationale": "This connection is substantial because it identifies a shared insight or principle that underlies the approaches taken in both papers. This suggests that the authors of both papers are aware of the challenges and trade-offs involved in fine-tuning language models, and are seeking to address those challenges in a principled way."
+        }
+    ]
+}

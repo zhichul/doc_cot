@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "Sumanth Dathathri, Andrea Madotto, Janice Lan, Jane Hung, Eric Frank, Piero Molino, J. Yosinski, Rosanne Liu",
+        "year": 2019,
+        "title": "Plug and Play Language Models: A Simple Approach to Controlled Text Generation",
+        "corpusId": 208617790
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Dathathri et al., 2020)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "A KL penalty was also used by Dathathri et al. (2020), this time in a plug-and-play rather than a fine-tuning context.",
+        "score": null,
+        "qa_pairs": []
+    }
+}

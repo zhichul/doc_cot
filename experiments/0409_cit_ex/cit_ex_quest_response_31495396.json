@@ -1,0 +1,29 @@
+{
+    "thought_process": "To come up with questions that have identical answers for both the current paper and the cited paper, we need to analyze the relationship between the two papers. The current paper cites Csisz\u00e1r & Shields (2004) in the context of Information Geometry and the use of information theory concepts in statistics. The cited paper provides a tutorial on applications of information theory concepts in statistics. Therefore, the questions that we can ask are related to the topics covered in the cited paper, such as information divergence, large deviations, hypothesis testing, maximum likelihood estimation, and iterative algorithms with an information geometry background.",
+    "questions": [
+        {
+            "question": "What is the role of information divergence in statistics?",
+            "score": "2",
+            "rationale": "Both papers discuss the importance of information divergence in statistics, with the current paper using it to solve a problem in controlled text generation and the cited paper providing a tutorial on its applications in statistics.",
+            "answer": "Information divergence plays a key role in statistics, often with a geometric flavor as an analogue of squared Euclidean distance."
+        },
+        {
+            "question": "What is the concept of I-projection in information geometry?",
+            "score": "2",
+            "rationale": "The cited paper discusses I-projection as a concept in information geometry, and the current paper uses a similar concept to solve a problem in controlled text generation.",
+            "answer": "I-projection is a concept in information geometry that refers to the projection of a point onto a manifold, often used in statistical inference and machine learning."
+        },
+        {
+            "question": "What is the relationship between information theory and statistics?",
+            "score": "1",
+            "rationale": "Both papers discuss the relationship between information theory and statistics, but this is a very general question that could apply to many papers.",
+            "answer": "Information theory provides a framework for understanding and analyzing statistical systems, and is often used in statistical inference and machine learning."
+        },
+        {
+            "question": "What is the minimum description length principle?",
+            "score": "1",
+            "rationale": "The cited paper provides an introduction to the minimum description length principle, but this is not a central concept in the current paper.",
+            "answer": "The minimum description length principle is a concept in statistical inference that states that the best model is the one that can be described using the fewest bits."
+        }
+    ]
+}

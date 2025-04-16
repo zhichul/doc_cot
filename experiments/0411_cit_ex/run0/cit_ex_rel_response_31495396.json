@@ -1,0 +1,20 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation, which involves specifying constraints on the target language model and minimizing the KL divergence from the initial model. The cited paper, 'Information Theory and Statistics: A Tutorial', discusses the application of information theory concepts in statistics, including the Kullback-Leibler distance. The citance mentions that the current paper's formulation of Theorem 1 is a reformulation of results from Csisz\u00e1r & Shields (2004), which is likely related to the cited paper. Therefore, the connections between the two papers are likely to involve the use of information theory concepts, such as KL divergence, in the context of statistics and machine learning.",
+    "connections": [
+        {
+            "connection": "Both papers use information theory concepts, such as KL divergence, to formulate and solve problems in statistics and machine learning.",
+            "score": "2",
+            "rationale": "The current paper explicitly mentions the use of KL divergence and cites Csisz\u00e1r & Shields (2004), which is related to the cited paper. This suggests a strong connection between the two papers in terms of the use of information theory concepts to solve problems in statistics and machine learning."
+        },
+        {
+            "connection": "The papers share a common goal of developing statistical methods for modeling and analyzing data, with the current paper focusing on controlled text generation and the cited paper discussing more general statistical topics.",
+            "score": "1",
+            "rationale": "While the papers share a common goal of developing statistical methods, the specific focus and application areas are quite different. The connection is therefore more general and superficial, rather than specific and core to the relationship between the two papers."
+        },
+        {
+            "connection": "The use of exponential families in the current paper may be related to the discussion of exponential families in the context of information theory and statistics in the cited paper.",
+            "score": "1",
+            "rationale": "The connection between the use of exponential families in the two papers is possible, but not explicitly stated. The current paper does not provide much context or explanation for the use of exponential families, making it difficult to determine the strength of the connection."
+        }
+    ]
+}

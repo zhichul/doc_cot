@@ -1,0 +1,42 @@
+messages:
+  system: |-
+    You are a paper reviewer trying to identify connections between the paper you're reviewing with previous ideas and approaches in the field.
+  user: |-
+    Below is the CURRENT PAPER that you're reviewing and a paper that it CITES. 
+    Below is also the CITANCE, which is the context containing a citation to the CITED PAPER.
+
+    Please respond with a list of CONNECTIONS between the two papers. A connection is a similarity between the two papers. Some example connections include related purpose, method, finding, or insight. 
+
+    Please respond in the following json format:
+    {
+      "thought_process": str # first discuss how the two papers are related at a high level, this should help you come up with more detailed connections
+      "connections": [
+        {
+          "connection": # detailed description of the connection between a paper
+          "score": str # a score of quality of the question
+          "rationale": str # a justification for why this question yields the same answer on both papers, and the score it receives
+        },
+      ]
+    }
+    
+
+    List all important connections, and give a score between 0 to 2, where 0 means it's erroneous, 1 means it's superficial and many other papers would be connected in the same way, and 2 means it touches the core of the relationship between the two papers, and it's unlikely that many other papers would have the same connection.
+
+    <current_paper>
+    {{ paper.text }}
+    </current_paper>
+
+    <cited_paper>
+    {{ citance.citation.paper.text }}
+    </cited_paper>
+
+    <citance>
+    {{ citance.context }}
+    </citance>
+
+    Additional instructions: The connection should avoid idiosyncratic terminology as much as possible, but should instead use language where a reader unfamiliar with the paper but is genearlly well-read in the field should be able to understand.
+response_format:
+  type:
+    json_object
+
+temperature: 0.0

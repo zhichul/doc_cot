@@ -1,0 +1,20 @@
+{
+    "thought_process": "The current paper proposes a Distributional Approach to Controlled Text Generation, which involves specifying constraints on the target distribution and optimizing for a trade-off between satisfying these constraints and minimizing KL divergence from the initial distribution. The cited paper provides an introduction to Information Geometry, which is a field that studies the geometric structure of probability distributions and their relationships. The connection between the two papers lies in the use of Information Geometry concepts, such as the Fisher Information Matrix and the KL divergence, to optimize the target distribution. Specifically, the current paper uses the concept of Energy-Based Models (EBMs) to represent the target distribution, which is related to the idea of dually flat manifolds in Information Geometry. The citance mentions Csisz\u00e1r & Shields (2004) and Information Geometry, indicating that the current paper draws on concepts from this field to solve the problem of controlled text generation.",
+    "connections": [
+        {
+            "connection": "Use of Information Geometry concepts, such as Fisher Information Matrix and KL divergence, to optimize the target distribution",
+            "score": "2",
+            "rationale": "The current paper explicitly mentions the use of Information Geometry concepts, such as the Fisher Information Matrix and the KL divergence, to optimize the target distribution. This indicates a strong connection between the two papers, as the cited paper provides a foundation for understanding these concepts."
+        },
+        {
+            "connection": "Representation of the target distribution using Energy-Based Models (EBMs), related to dually flat manifolds in Information Geometry",
+            "score": "2",
+            "rationale": "The current paper uses EBMs to represent the target distribution, which is related to the concept of dually flat manifolds in Information Geometry. This connection indicates that the current paper is building on ideas from the cited paper to develop a new approach to controlled text generation."
+        },
+        {
+            "connection": "Optimization of the target distribution using concepts from Information Geometry, such as the KL divergence and the Fisher Information Matrix",
+            "score": "2",
+            "rationale": "The current paper uses concepts from Information Geometry, such as the KL divergence and the Fisher Information Matrix, to optimize the target distribution. This connection indicates that the current paper is applying ideas from the cited paper to solve a specific problem in controlled text generation."
+        }
+    ]
+}

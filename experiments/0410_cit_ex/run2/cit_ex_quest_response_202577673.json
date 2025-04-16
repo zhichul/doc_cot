@@ -1,0 +1,23 @@
+{
+    "thought_process": "To find questions that have identical answers for the CURRENT PAPER and the CITED PAPER, we need to analyze the relationship between the two papers. The CURRENT PAPER proposes a Distributional Approach for Controlled Text Generation, which involves a constraint satisfaction problem combined with a divergence minimization objective. The CITED PAPER introduces Global Autoregressive Models (GAMs) for data-efficient sequence learning, which combines an autoregressive component with a log-linear component. Both papers deal with autoregressive models and their limitations, and both propose methods to improve their performance. The DPG algorithm is mentioned in the CURRENT PAPER as a technique suitable for sampling from a sequential EBM, which is also related to the GAMs in the CITED PAPER.",
+    "questions": [
+        {
+            "question": "What are the limitations of standard autoregressive models in sequence learning?",
+            "score": "2",
+            "rationale": "Both papers discuss the limitations of standard autoregressive models, such as their tendency to suffer from a form of myopia and their difficulty in accounting for global properties of the predicted sequences. The answer to this question would be the same for both papers, as they both identify the same limitations.",
+            "answer": "Standard autoregressive models tend to suffer from a form of myopia and have difficulty accounting for global properties of the predicted sequences."
+        },
+        {
+            "question": "How can autoregressive models be improved to address their limitations?",
+            "score": "2",
+            "rationale": "Both papers propose methods to improve the performance of autoregressive models. The CURRENT PAPER proposes a Distributional Approach, while the CITED PAPER introduces Global Autoregressive Models (GAMs). The answer to this question would be the same for both papers, as they both propose methods to improve autoregressive models.",
+            "answer": "Autoregressive models can be improved by combining them with other components, such as a log-linear component, or by using techniques like the Distributional Policy Gradient algorithm."
+        },
+        {
+            "question": "What is the purpose of the DPG algorithm in the context of autoregressive models?",
+            "score": "2",
+            "rationale": "The CURRENT PAPER mentions the DPG algorithm as a technique suitable for sampling from a sequential EBM, which is related to the GAMs in the CITED PAPER. The answer to this question would be the same for both papers, as they both discuss the use of the DPG algorithm in the context of autoregressive models.",
+            "answer": "The DPG algorithm is used for sampling from a sequential EBM, which is a component of autoregressive models like GAMs."
+        }
+    ]
+}

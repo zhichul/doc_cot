@@ -1,0 +1,23 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation. The cited paper presents a sequence level training algorithm for text generation tasks, which directly optimizes the evaluation metric used at test time. The citance highlights the connection between the two papers, mentioning prior work that uses reinforcement learning to optimize global objectives in machine translation and summarization tasks. To identify questions with identical answers for both papers, we need to consider the common themes and methodologies discussed in both papers, such as sequence generation, evaluation metrics, and optimization techniques.",
+    "questions": [
+        {
+            "question": "What are the common challenges faced by sequence generation models, and how do the proposed approaches address these challenges?",
+            "score": "2",
+            "rationale": "Both papers discuss challenges related to sequence generation, such as exposure bias and the need for effective optimization techniques. The current paper proposes a distributional approach, while the cited paper presents a sequence level training algorithm. This question requires understanding the common challenges and how the proposed approaches address them.",
+            "answer": "Both papers identify exposure bias and the need for effective optimization techniques as common challenges. The current paper addresses these challenges through a distributional approach, while the cited paper proposes a sequence level training algorithm that directly optimizes the evaluation metric."
+        },
+        {
+            "question": "How do the proposed approaches optimize the evaluation metrics used in sequence generation tasks?",
+            "score": "2",
+            "rationale": "Both papers discuss optimizing evaluation metrics, such as BLEU and ROUGE, in sequence generation tasks. The current paper proposes a distributional approach, while the cited paper presents a sequence level training algorithm. This question requires understanding how the proposed approaches optimize these metrics.",
+            "answer": "The current paper optimizes the evaluation metrics through a distributional approach, which minimizes the KL divergence from the initial language model distribution. The cited paper optimizes the evaluation metrics through a sequence level training algorithm that directly optimizes the metric used at test time."
+        },
+        {
+            "question": "What are the advantages and limitations of using reinforcement learning in sequence generation tasks?",
+            "score": "2",
+            "rationale": "Both papers mention reinforcement learning as a technique used in sequence generation tasks. The citance highlights prior work that uses reinforcement learning to optimize global objectives. This question requires understanding the advantages and limitations of using reinforcement learning in sequence generation tasks.",
+            "answer": "Reinforcement learning can be effective in optimizing global objectives in sequence generation tasks, but it can also be challenging to train and may require careful tuning of hyperparameters. The current paper and the cited paper both propose approaches that build upon or modify reinforcement learning techniques to address these challenges."
+        }
+    ]
+}

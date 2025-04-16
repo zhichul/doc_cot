@@ -1,0 +1,29 @@
+{
+    "thought_process": "To come up with questions that can be asked of papers and have identical answers for the CURRENT PAPER and the CITED PAPER, we need to understand the relationship between the two papers. The CURRENT PAPER presents a Distributional Approach to Controlled Text Generation, while the CITED PAPER discusses Sequence Level Training with Recurrent Neural Networks. The citance mentions the use of Reinforcement Learning (RL) and task-specific rewards like BLEU and ROUGE. Given this context, we can identify questions that relate to the core aspects of both papers, such as their approach to text generation, the incorporation of reinforcement learning, and the metrics used for evaluation.",
+    "questions": [
+        {
+            "question": "What is the primary approach used for text generation in the paper?",
+            "score": "2",
+            "rationale": "This question gets at the core of what the papers are about: their methods for generating text. The CURRENT PAPER uses a Distributional Approach, while the CITED PAPER focuses on Sequence Level Training with Recurrent Neural Networks. The answer to this question for both papers highlights their distinct methodologies.",
+            "answer": "CURRENT PAPER: Distributional Approach; CITED PAPER: Sequence Level Training with Recurrent Neural Networks"
+        },
+        {
+            "question": "Is Reinforcement Learning (RL) utilized in the paper?",
+            "score": "2",
+            "rationale": "Both papers incorporate elements of Reinforcement Learning, making this a key commonality. The CURRENT PAPER uses RL principles in its adaptive distributional variant of Policy Gradient, and the CITED PAPER applies RL through its MIXER algorithm, which combines XENT and REINFORCE. This question touches on the shared aspect of RL in the two papers.",
+            "answer": "Yes, both papers use Reinforcement Learning"
+        },
+        {
+            "question": "What metrics are used to evaluate the performance of the text generation models?",
+            "score": "2",
+            "rationale": "The use of specific metrics is crucial for evaluating the success of text generation models. Both papers mention the use of metrics such as BLEU and ROUGE, or in the case of the CURRENT PAPER, metrics like DKL(p||\u03c0\u03b8) and self-BLEU. This question highlights the common ground in how the papers assess model performance.",
+            "answer": "CURRENT PAPER: DKL(p||\u03c0\u03b8), self-BLEU, etc.; CITED PAPER: BLEU, ROUGE"
+        },
+        {
+            "question": "Does the paper address the issue of exposure bias in text generation?",
+            "score": "2",
+            "rationale": "Exposure bias is a significant challenge in training text generation models, where the model is trained on a different distribution of inputs than what it sees at test time. Both papers acknowledge and address this issue: the CURRENT PAPER through its distributional approach and adaptive technique, and the CITED PAPER via its MIXER algorithm that gradually exposes the model to its own predictions. This question targets a critical problem that both papers aim to solve.",
+            "answer": "Yes, both papers address exposure bias"
+        }
+    ]
+}

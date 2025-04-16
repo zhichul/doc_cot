@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "authorId": "14487640",
+            "name": "Ari Holtzman"
+        },
+        {
+            "authorId": "144685020",
+            "name": "Jan Buys"
+        },
+        {
+            "authorId": "2152141637",
+            "name": "Li Du"
+        },
+        {
+            "authorId": "39191185",
+            "name": "Maxwell Forbes"
+        },
+        {
+            "authorId": "1699545",
+            "name": "Yejin Choi"
+        }
+    ],
+    "year": 2019,
+    "title": "The Curious Case of Neural Text Degeneration",
+    "corpusId": 127986954
+}

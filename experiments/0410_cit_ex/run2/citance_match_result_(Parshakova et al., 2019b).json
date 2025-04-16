@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "Tetiana Parshakova, J. Andreoli, Marc Dymetman",
+        "year": 2019,
+        "title": "Global Autoregressive Models for Data-Efficient Sequence Learning",
+        "corpusId": 202577673
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Parshakova et al., 2019b)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "One technique that is suitable for our objective here, namely sampling from a sequential EBM that includes an autoregressive component a(x), is the DPG (\"Distributional Policy Gradient\") algorithm (Parshakova et al., 2019b).",
+        "score": null,
+        "qa_pairs": []
+    }
+}

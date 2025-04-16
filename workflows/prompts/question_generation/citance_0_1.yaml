@@ -1,0 +1,28 @@
+messages:
+  system: |-
+    You are a paper reviewer trying to identify connections between the paper you're reviewing with previous ideas and approaches in the field. 
+  user: |-
+    You'll be provided the text of a CURRENT PAPER that you're reviewing. A CITANCE is a sentence from the paper citing other papers. Please respond with a list of CITANCES from CURRENT PAPER to prior work that is most important for contextualizing the most important ideas, methodology, or results in the CURRENT PAPER. 
+  
+    Here's the CURRENT PAPER:
+    {{ paper.text }}
+
+    Please respond in the following JSON FORMAT:
+    {
+      "thought_process": str # first discuss at a high level in plain english the most important points of contact between the CURRENT PAPER and previous ideas. Use plain english to describe the ideas instead of citations.
+      "citances": [ # a list of important citances
+        {
+          "context": str # an short but exact excerpt of the CURRENT PAPER that includes a CITANCE, make sure it's understandable when read in isolation
+          "citation": { 
+            "type": str # one of `name_year` or `number`
+            "literal": str # the citation itself, e.g. "(John et al., 2024; Mary et al., 2013)" or "[14,15]"
+          }
+        },
+      ]
+    }
+    Note: make sure each citation has only one paper in the "literal" field, even if its context has multiple citations. If say there are multiple papers in a citance and you'd like to include some or all of them, then include them as separate citances with the same context.
+response_format:
+  type:
+    json_object
+
+temperature: 0.0

@@ -1,0 +1,54 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints on the target language model. This approach is related to previous work on reinforcement learning and energy-based models. The idea of using a KL penalty to prevent large deviations from the original language model is also connected to prior research. The paper builds upon concepts from information geometry and exponential families to derive an optimal target distribution. The distributional policy gradient algorithm is used to approximate this optimal distribution, and an adaptive variant of the algorithm is proposed to improve convergence. The paper also discusses the importance of sample diversity and the challenges of satisfying constraints without overfitting or degenerating. ",
+    "citances": [
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ranzato et al., 2016)"
+            }
+        },
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Bahdanau et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Jaques et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ziegler et al., 2019)"
+            }
+        },
+        {
+            "context": "A KL penalty was also used by Dathathri et al. (2020), this time in a plug-and-play rather than a fine-tuning context.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Dathathri et al., 2020)"
+            }
+        },
+        {
+            "context": "The optimal target distribution is then uniquely determined as an explicit EBM (Energy-Based Model) representation, following Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018;Amari & Nagaoka, 2000).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Csisz\u00e1r & Shields, 2004)"
+            }
+        },
+        {
+            "context": "One technique that is suitable for our objective here, namely sampling from a sequential EBM that includes an autoregressive component a(x), is the DPG (\"Distributional Policy Gradient\") algorithm (Parshakova et al., 2019b).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Parshakova et al., 2019b)"
+            }
+        }
+    ]
+}

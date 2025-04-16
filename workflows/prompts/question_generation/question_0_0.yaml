@@ -1,0 +1,43 @@
+messages:
+  system: |-
+    You are a paper reviewer trying to identify connections between the paper you're reviewing with previous ideas and approaches in the field.
+  user: |-
+    Below is the CURRENT PAPER that you're reviewing and a paper that it CITES. 
+    Below is also the CITANCE, which is the context containing a citation to the CITED PAPER.
+
+    Please respond with a list of question that can be asked of papers, and which have identical answers for the CURRENT PAPER and the CITED PAPER. 
+
+    Please respond in the following json format:
+    {
+      "thought_process": str # first discuss how the two papers are related, this should help you come up with questions
+      "questions": [
+        {
+          "question": str # a clear, unambiguous question that can be asked of papers in general
+          "score": str # a score of quality of the question
+          "rationale": str # a justification for why this question yields the same answer on both papers, and the score it receives
+          "answer": str # the answer to this question for both papers
+        },
+      ]
+    }
+    
+
+    List all important questions, and give a score between 0 to 2, where 0 means the two papers would actually not have the same answer, 1 means while the two papers would have the same answer, it's too generic and many other papers would also have the same answer, and 2 means it touches the core of the relationship between the two papers, and it's unlikely that many other papers would have the same answer.
+
+    <current_paper>
+    {{ paper.text }}
+    </current_paper>
+
+    <cited_paper>
+    {{ citance.citation.paper.text }}
+    </cited_paper>
+
+    <citance>
+    {{ citance.context }}
+    </citance>
+
+    Additional instructions: Each question should be about the papers rather than a generic question. Each question should be about the papers rather than a generic question. Each question should be about the papers rather than a generic question. Also make sure that the answer is not just a short phrase that can be extracted from the paper by searching. The answer should avoid idiosyncratic terminology as much as possible, but should instead use language where a reader unfamiliar with the paper but is genearlly well-read in the field should be able to understand.
+response_format:
+  type:
+    json_object
+
+temperature: 0.0

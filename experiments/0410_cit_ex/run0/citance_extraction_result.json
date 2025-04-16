@@ -1,0 +1,54 @@
+{
+    "thought_process": "The CURRENT PAPER proposes a Distributional Approach for controlled text generation from pre-trained Language Models (LMs). This approach formalizes the problem as a constraint satisfaction problem combined with a divergence minimization objective, allowing for both pointwise and distributional constraints. The idea of using constraints to control text generation is not new and has been explored in previous works, such as using reinforcement learning to optimize global objectives. However, the CURRENT PAPER's approach is distinct in its ability to handle distributional constraints and its use of a KL-adaptive version of the Distributional Policy Gradient algorithm. The paper also discusses the importance of minimizing KL divergence from the initial LM distribution to prevent degeneration and ensure sample diversity. The concept of degeneration has been noted in previous works, where optimization processes often lead to poor examples that improve the average reward but forgo coherence and fluency.",
+    "citances": [
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ranzato et al., 2016)"
+            }
+        },
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Bahdanau et al., 2017)"
+            }
+        },
+        {
+            "context": "However, such an optimization process is not infallible; Liu et al. (2016a) noted that it often leads to \"degeneration\", producing poor examples that improve the average reward but forgo coherence and fluency.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Liu et al., 2016a)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Jaques et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ziegler et al., 2019)"
+            }
+        },
+        {
+            "context": "Dathathri et al. (2020), this time in a plug-and-play rather than a fine-tuning context, also use KL divergence to penalize deviations from the initial policy.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Dathathri et al., 2020)"
+            }
+        },
+        {
+            "context": "One technique that is suitable for our objective here, namely sampling from a sequential EBM that includes an autoregressive component a(x), is the DPG (\"Distributional Policy Gradient\") algorithm (Parshakova et al., 2019b).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Parshakova et al., 2019b)"
+            }
+        }
+    ]
+}

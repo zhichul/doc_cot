@@ -1,0 +1,20 @@
+{
+    "thought_process": "To identify the connections between the two papers, we first need to understand their main contributions and ideas. The current paper proposes a Distributional Approach for controlled text generation, which allows for specifying both pointwise and distributional constraints over a target language model. The cited paper, on the other hand, introduces a sequence level training algorithm that directly optimizes the metric used at test time, such as BLEU or ROUGE, for text generation tasks. Both papers aim to improve the quality of generated text by addressing the exposure bias problem and optimizing for the final evaluation metric. With this understanding, we can identify connections between the two papers in terms of their objectives, methodologies, and applications.",
+    "connections": [
+        {
+            "connection": "Both papers aim to address the exposure bias problem in text generation, where the model is only exposed to the training data distribution, rather than its own predictions.",
+            "score": "2",
+            "rationale": "This connection is core to the relationship between the two papers, as both propose methods to mitigate the exposure bias problem, which is a fundamental issue in text generation. The current paper uses a distributional approach, while the cited paper uses a sequence level training algorithm."
+        },
+        {
+            "connection": "Both papers optimize for the final evaluation metric, rather than relying on word-level losses.",
+            "score": "2",
+            "rationale": "This connection highlights the shared objective of both papers, which is to optimize for the final evaluation metric, such as BLEU or ROUGE. The current paper uses a distributional approach to achieve this, while the cited paper uses a sequence level training algorithm."
+        },
+        {
+            "connection": "Both papers use reinforcement learning-inspired approaches to optimize the generation process.",
+            "score": "1",
+            "rationale": "This connection is more superficial, as many papers in the field of text generation use reinforcement learning-inspired approaches. However, it still highlights a commonality between the two papers, which both draw on ideas from reinforcement learning to optimize the generation process."
+        }
+    ]
+}

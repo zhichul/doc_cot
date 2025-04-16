@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "Natasha Jaques, Asma Ghandeharioun, Judy Hanwen Shen, Craig Ferguson, \u00c0gata Lapedriza, Noah J. Jones, S. Gu, Rosalind W. Picard",
+        "year": 2019,
+        "title": "Way Off-Policy Batch Deep Reinforcement Learning of Implicit Human Preferences in Dialog",
+        "corpusId": 195766797
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Jaques et al., 2017)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+        "score": null,
+        "qa_pairs": []
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "thought_process": "To find connections between the two papers, we need to analyze their content and identify similarities in their goals, methods, or findings. The current paper proposes a Distributional Approach for controlled text generation, which involves specifying constraints on the target language model and minimizing the KL divergence from the initial model distribution. The cited paper, on the other hand, presents an actor-critic algorithm for sequence prediction, which is also related to text generation. By examining the citance, we can see that both papers discuss the use of reinforcement learning-inspired methods for optimizing global objectives in text generation tasks.",
+    "connections": [
+        {
+            "connection": "Both papers use reinforcement learning-inspired methods for text generation tasks",
+            "score": "2",
+            "rationale": "The current paper uses a Distributional Approach, which is inspired by reinforcement learning, to control text generation. The cited paper presents an actor-critic algorithm, which is a type of reinforcement learning method, for sequence prediction. This connection is strong because both papers rely on similar methodologies to achieve their goals."
+        },
+        {
+            "connection": "Both papers aim to optimize global objectives in text generation tasks",
+            "score": "2",
+            "rationale": "The current paper aims to optimize the target language model to satisfy certain constraints, while the cited paper aims to optimize the sequence prediction model to maximize a task-specific score. This connection is strong because both papers focus on optimizing global objectives, which is a key aspect of text generation tasks."
+        },
+        {
+            "connection": "Both papers use sequence prediction models",
+            "score": "1",
+            "rationale": "The current paper uses a sequence prediction model to generate text, while the cited paper presents a sequence prediction algorithm. This connection is superficial because sequence prediction is a common technique used in many natural language processing tasks, and the specific models used in the two papers may differ significantly."
+        }
+    ]
+}

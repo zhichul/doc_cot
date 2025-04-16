@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "I. Csisz\u00e1r, P. Shields",
+        "year": 2004,
+        "title": "Information Theory and Statistics: A Tutorial",
+        "corpusId": 31495396
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Csisz\u00e1r & Shields, 2004)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "The optimal target distribution is then uniquely determined as an explicit EBM (Energy-Based Model) representation, following Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018;Amari & Nagaoka, 2000).",
+        "score": null,
+        "qa_pairs": []
+    }
+}

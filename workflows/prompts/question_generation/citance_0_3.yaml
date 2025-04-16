@@ -1,0 +1,34 @@
+messages:
+  system: |-
+    You are a paper reviewer and your current goal is to identify connections between the paper being reviewed and prior work that enabled it. 
+  user: |-
+    You are provided the full text of the CURRENT PAPER that you're reviewing. Your task is to generate a list of CITANCES that capture the complete set of important PRIOR WORK that enabled the CURRENT PAPER. A CITANCE is a sentence (or a few sentences) from the CURRENT PAPER describing relevant prior work and providing a reference (could be a name, year, or a reference number).
+  
+    Here's the CURRENT PAPER:
+    {{ paper.text }}
+
+    Please respond in the following JSON FORMAT:
+    {
+      "thought_process": str # First discuss what the paper does, highlighting its most important ideas or decisions in this paper (could be their motivation, the probem it solves, the purpose, some insight, some method, or some findings, etc). Then think about whether each of these important ideas or decisions are informed or supported by particular ideas from prior work. Look for very specific connections, not background knowledge kinds of support. Try to use as general language as possible when discussing this, imagine you're writing this for a meta-reviewer who has a general background in the topic area but doesn't have a lot of time,
+      "core": [  # a list of the important ideas and decisions of the current paperand how prior work supports them
+        {
+          "idea": str # the core idea or decisions
+          "support": str # describe prior work that supported this paper
+        }
+      ]
+      "citances": [ # a list of important citances
+        {
+          "context": str # an short but exact excerpt of the CURRENT PAPER that includes a CITANCE, make sure it's understandable when read in isolation
+          "citation": { 
+            "type": str # one of `name_year` or `number`
+            "literal": str # the citation itself, e.g. "(John et al., 2024; Mary et al., 2013)" or "[14,15]"
+          }
+        },
+      ]
+    }
+    Note: make sure each citation has only one paper in the "literal" field, even if its context has multiple citations. If say there are multiple papers in a citance and you'd like to include some or all of them, then include them as separate citances with the same context.
+response_format:
+  type:
+    json_object
+
+temperature: 0.0

@@ -1,0 +1,29 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. The cited paper, on the other hand, discusses the evaluation of unsupervised dialogue systems and the limitations of using word-overlap based metrics such as BLEU. The citance mentions that optimization processes can lead to 'degeneration', which is related to the idea that word-overlap metrics may not capture the nuances of human language. To come up with questions that have identical answers for both papers, we need to find commonalities between the two papers, such as the importance of evaluating language generation models, the limitations of current metrics, and the need for new approaches to controlled text generation.",
+    "questions": [
+        {
+            "question": "What is the main challenge in evaluating the quality of generated text?",
+            "score": "2",
+            "rationale": "Both papers highlight the difficulty of evaluating language generation models, with the current paper discussing the need for new approaches to controlled text generation and the cited paper emphasizing the limitations of word-overlap metrics.",
+            "answer": "The main challenge is that current metrics, such as word-overlap based metrics, do not capture the nuances of human language and may not correlate with human judgments."
+        },
+        {
+            "question": "What is the importance of evaluating language generation models?",
+            "score": "2",
+            "rationale": "Both papers emphasize the importance of evaluating language generation models, with the current paper discussing the need for new approaches to controlled text generation and the cited paper highlighting the limitations of current metrics.",
+            "answer": "Evaluating language generation models is crucial to ensure that the generated text is of high quality, coherent, and fluent."
+        },
+        {
+            "question": "What are the limitations of current metrics for evaluating language generation models?",
+            "score": "2",
+            "rationale": "The cited paper discusses the limitations of word-overlap based metrics, such as BLEU, while the current paper highlights the need for new approaches to controlled text generation that go beyond current metrics.",
+            "answer": "Current metrics, such as word-overlap based metrics, do not capture the nuances of human language and may not correlate with human judgments."
+        },
+        {
+            "question": "What is the need for new approaches to controlled text generation?",
+            "score": "2",
+            "rationale": "The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. The cited paper highlights the limitations of current metrics, which implies the need for new approaches.",
+            "answer": "There is a need for new approaches to controlled text generation that can capture the complexities of human language and ensure that the generated text is of high quality, coherent, and fluent."
+        }
+    ]
+}

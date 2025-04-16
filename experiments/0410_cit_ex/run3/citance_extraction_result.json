@@ -1,0 +1,40 @@
+{
+    "thought_process": "The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. This approach is related to previous work in reinforcement learning, where the goal is to optimize a global objective function using task-specific rewards. However, the current paper highlights the limitations of existing methods, such as degeneration and lack of diversity, and proposes a new framework that combines the strengths of both pointwise and distributional constraints. The paper also discusses the connection between the proposed approach and energy-based models, which provide a flexible mechanism for specifying models but leave a gap between representation and exploitation. The authors draw on ideas from information geometry and previous work on exponential families to develop their framework.",
+    "citances": [
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ranzato et al., 2016)"
+            }
+        },
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Bahdanau et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Jaques et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ziegler et al., 2019)"
+            }
+        },
+        {
+            "context": "The advantage of this version of the connection between Generalized Maximum Entropy and Exponential Families is its generality, which distinguishes it from other presentations, and which makes it ideal for unified application to pointwise, distributional or hybrid constraints. Our statement of Theorem 1 is actually a reformulation of two results in section 3 of Csisz\u00e1r & Shields (2004).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Csisz\u00e1r & Shields, 2004)"
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "match": {
+        "authors": [
+            {
+                "authorId": "3461768",
+                "name": "Tetiana Parshakova"
+            },
+            {
+                "authorId": "1788525",
+                "name": "J. Andreoli"
+            },
+            {
+                "authorId": "2954698",
+                "name": "Marc Dymetman"
+            }
+        ],
+        "year": 2019,
+        "title": "Distributional Reinforcement Learning for Energy-Based Sequential Models",
+        "corpusId": 209405007
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Parshakova et al., 2019b)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "Our approach there consists in proposing a KL-adaptive version of the DPG algorithm, which exploits ascertained improvements of the trained policy to speed up convergence, similar to Parshakova et al. (2019b).",
+        "score": null,
+        "qa_pairs": []
+    }
+}

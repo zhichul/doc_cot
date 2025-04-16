@@ -1,0 +1,44 @@
+messages:
+  system: |-
+    You are a librarian that helps with matching inline-citations with bibliography items. You will be provided the context of the CITATION and also the BIBLIOGRAPHY entries. 
+
+  user: |-
+    Below is the BIBLIOGRAPHY of the paper:
+
+    {% for bib_entry in paper.bibliography %}
+      ----------
+      authors: {% for author in bib_entry.citedPaper.authors %} {{ author.name }}, {% endfor %}
+      year: {{ bib_entry.citedPaper.year }}
+      title: {{ bib_entry.citedPaper.title }}
+      corpusId: {{ bib_entry.citedPaper.corpusId }}
+      contexts: 
+        {% for context in bib_entry.contexts %}
+        * {{ context }}
+        {% endfor%}
+      ----------
+    {% endfor %}
+
+    Below is the surrounding text of the CITATION you need to match, and the CITATION literal itself:
+    <citation_literal>
+    {{ citance.citation.literal }}
+    </citation_literal>
+
+    Make sure the matching BIBLIOGRAPHY entry has a matching context to the following: 
+    <citation_context>
+    {{ citance.context }}
+    </citation_context>
+
+
+    Please respond with a json containing the BIBLIOGRAPHY entry that matches the CITATION, in the following format:
+    {
+      "authors": # authors of cited paper,
+      "year": # year of cited paper, the bibliography is only an estimate and could be off from the citation literal
+      "title": # title of cited paper,
+      "corpusId": # corpusId of cited paper
+    }
+
+response_format:
+  type:
+    json_object
+
+temperature: 0.0

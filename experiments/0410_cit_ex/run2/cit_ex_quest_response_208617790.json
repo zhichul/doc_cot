@@ -1,0 +1,23 @@
+{
+    "thought_process": "The current paper discusses controlled text generation using a distributional approach, which allows for both pointwise and distributional constraints to be specified. The cited paper, 'Plug and Play Language Models: A Simple Approach to Controlled Text Generation', proposes a method for controlled text generation using a pre-trained language model and one or more simple attribute classifiers. The citance mentions a KL penalty used by Dathathri et al. (2020), which is related to the topic of controlled text generation. The current paper and the cited paper both deal with controlling the output of a language model to meet certain constraints or attributes. To come up with questions that have identical answers for both papers, we need to focus on the aspects that are common to both, such as the use of constraints, the importance of fluency and diversity in generated text, and the challenges of controlling a language model's output.",
+    "questions": [
+        {
+            "question": "What is the main goal of controlled text generation?",
+            "score": "2",
+            "rationale": "Both papers aim to control the output of a language model to meet certain constraints or attributes, making this question relevant to both. The answer to this question should be 'to generate text that meets specific constraints or attributes while maintaining fluency and diversity'.",
+            "answer": "to generate text that meets specific constraints or attributes while maintaining fluency and diversity"
+        },
+        {
+            "question": "What is the challenge of controlling a language model's output?",
+            "score": "2",
+            "rationale": "Both papers discuss the difficulty of controlling a language model's output to meet certain constraints or attributes without sacrificing fluency and diversity. The answer to this question should be 'it is difficult to balance constraint satisfaction with fluency and diversity, and models may degenerate or produce unrealistic text if not properly controlled'.",
+            "answer": "it is difficult to balance constraint satisfaction with fluency and diversity, and models may degenerate or produce unrealistic text if not properly controlled"
+        },
+        {
+            "question": "How do the papers approach the problem of controlled text generation?",
+            "score": "2",
+            "rationale": "The current paper uses a distributional approach, while the cited paper uses a plug-and-play approach with attribute classifiers. The answer to this question should be 'the current paper uses a distributional approach, while the cited paper uses a plug-and-play approach with attribute classifiers'.",
+            "answer": "the current paper uses a distributional approach, while the cited paper uses a plug-and-play approach with attribute classifiers"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "thought_process": "The current paper and the cited paper both deal with the problem of controlled text generation. The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. The cited paper, on the other hand, discusses way off-policy batch deep reinforcement learning of implicit human preferences in dialog. Despite the differences in their focus, both papers share a common goal of improving the quality of generated text by incorporating constraints or preferences. The connection between the two papers can be identified by analyzing their approaches to handling constraints and preferences, as well as their use of KL-divergence as a regularization technique.",
+    "connections": [
+        {
+            "connection": "Both papers use KL-divergence as a regularization technique to prevent large deviations from the original model or prior distribution.",
+            "score": "2",
+            "rationale": "The use of KL-divergence as a regularization technique is a key connection between the two papers. In the current paper, KL-divergence is used to minimize the deviation from the initial language model distribution, while in the cited paper, it is used to penalize divergence from the prior model. This connection highlights the importance of KL-divergence in controlling the generation of text and preventing mode collapse."
+        },
+        {
+            "connection": "Both papers aim to improve the quality of generated text by incorporating constraints or preferences.",
+            "score": "2",
+            "rationale": "The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. The cited paper, on the other hand, discusses learning implicit human preferences in dialog to improve the quality of generated text. This connection highlights the shared goal of improving the quality of generated text, despite the differences in their approaches."
+        },
+        {
+            "connection": "Both papers deal with the problem of overestimation or degeneration in generated text.",
+            "score": "1",
+            "rationale": "The current paper discusses the problem of degeneration in generated text, where the model produces poor examples that improve the average reward but forgo coherence and fluency. The cited paper also mentions the problem of overestimation in Q-values, which can lead to unrealistic language generation. This connection highlights the common challenge of preventing overestimation or degeneration in generated text, but it is a relatively superficial connection as many papers in the field deal with this issue."
+        }
+    ]
+}

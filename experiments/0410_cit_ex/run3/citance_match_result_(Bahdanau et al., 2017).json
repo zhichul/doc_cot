@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "Dzmitry Bahdanau, Philemon Brakel, Kelvin Xu, Anirudh Goyal, Ryan Lowe, Joelle Pineau, Aaron C. Courville, Yoshua Bengio",
+        "year": 2016,
+        "title": "An Actor-Critic Algorithm for Sequence Prediction",
+        "corpusId": 14096841
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Bahdanau et al., 2017)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+        "score": null,
+        "qa_pairs": []
+    }
+}

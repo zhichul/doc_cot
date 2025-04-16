@@ -1,0 +1,47 @@
+{
+    "thought_process": "The CURRENT PAPER proposes a Distributional Approach for controlled text generation, which allows for specifying both pointwise and distributional constraints over the target language model. This approach is built upon the idea of minimizing KL divergence from the initial language model distribution, while satisfying the specified constraints. The paper draws connections to previous work in reinforcement learning, particularly in the context of text generation, where rewards are used to guide the generation process. It also relates to the concept of energy-based models, which provide a flexible mechanism for specifying models. The authors highlight the importance of balancing constraint satisfaction with divergence from the initial language model, to avoid degeneration and promote sample diversity. The paper also touches upon the problem of bias in language models and how the proposed approach can be used to address this issue.",
+    "citances": [
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ranzato et al., 2016)"
+            }
+        },
+        {
+            "context": "Prior work, taking inspiration from Reinforcement Learning (RL), has aimed at inducing autoregressive models to optimize global objectives using task specific rewards such as BLEU and ROUGE for Machine Translation and Summarization (Ranzato et al., 2016;Bahdanau et al., 2017), or hand crafted rewards (Li et al., 2016b;Tambwekar et al., 2019) to improve certain a priori desirable features.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Bahdanau et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Jaques et al., 2017)"
+            }
+        },
+        {
+            "context": "Jaques et al. (2017);Ziegler et al. (2019) propose a conservative fine-tuning approach moderated by a KL penalty between the trained policy and the original LM, discouraging large deviations.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Ziegler et al., 2019)"
+            }
+        },
+        {
+            "context": "A KL penalty was also used by Dathathri et al. (2020), this time in a plug-and-play rather than a fine-tuning context.",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Dathathri et al., 2020)"
+            }
+        },
+        {
+            "context": "Our approach there consists in proposing a KL-adaptive version of the DPG algorithm, which exploits ascertained improvements of the trained policy to speed up convergence, similar to Parshakova et al. (2019b).",
+            "citation": {
+                "type": "name_year",
+                "literal": "(Parshakova et al., 2019b)"
+            }
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "thought_process": "To find connections between the two papers, we first need to understand the main ideas and contributions of each paper. The current paper proposes a distributional approach to controlled text generation, which allows for specifying both pointwise and distributional constraints over a target language model. The cited paper, on the other hand, presents a method for off-policy batch reinforcement learning, which is applied to the problem of open-domain dialog generation. One potential connection between the two papers is the use of KL-divergence as a regularization technique. In the current paper, KL-divergence is used to penalize deviations from the original language model, while in the cited paper, KL-control is used to regularize the policy updates in the reinforcement learning algorithm.",
+    "connections": [
+        {
+            "connection": "Use of KL-divergence as a regularization technique",
+            "score": "2",
+            "rationale": "Both papers use KL-divergence as a regularization technique, although in different contexts. This connection highlights the versatility of KL-divergence as a tool for controlling deviations from a prior distribution or model."
+        },
+        {
+            "connection": "Application of reinforcement learning to text generation",
+            "score": "1",
+            "rationale": "Both papers apply reinforcement learning to text generation tasks, although the current paper focuses on controlled text generation and the cited paper focuses on open-domain dialog generation. This connection is superficial because many papers apply reinforcement learning to text generation tasks, but it still highlights the relevance of reinforcement learning to the field."
+        },
+        {
+            "connection": "Importance of preserving diversity in generated text",
+            "score": "2",
+            "rationale": "Both papers emphasize the importance of preserving diversity in generated text. In the current paper, this is achieved through the use of distributional constraints, while in the cited paper, it is achieved through the use of entropy regularization and KL-control. This connection highlights the importance of diversity in text generation tasks and the need for techniques that can preserve it."
+        }
+    ]
+}

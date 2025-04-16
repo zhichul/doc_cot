@@ -1,0 +1,19 @@
+{
+    "authors": [
+        {
+            "authorId": "3461768",
+            "name": "Tetiana Parshakova"
+        },
+        {
+            "authorId": "1788525",
+            "name": "J. Andreoli"
+        },
+        {
+            "authorId": "2954698",
+            "name": "Marc Dymetman"
+        }
+    ],
+    "year": 2019,
+    "title": "Distributional Reinforcement Learning for Energy-Based Sequential Models",
+    "corpusId": 209405007
+}

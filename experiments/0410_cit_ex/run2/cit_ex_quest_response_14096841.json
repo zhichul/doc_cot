@@ -1,0 +1,23 @@
+{
+    "thought_process": "The CURRENT PAPER proposes a Distributional Approach to Controlled Text Generation, which permits specifying both pointwise and distributional constraints over the target language model. The CITED PAPER proposes an Actor-Critic Algorithm for Sequence Prediction, which uses a critic network to predict the value of an output token given the policy of an actor network. Both papers aim to improve the quality of generated text by optimizing a task-specific score, such as BLEU or ROUGE. The CITANCE mentions prior work that uses Reinforcement Learning (RL) to induce autoregressive models to optimize global objectives using task-specific rewards, which is related to the CITED PAPER's use of an actor-critic algorithm.",
+    "questions": [
+        {
+            "question": "What is the main goal of the proposed approach in both papers?",
+            "score": "2",
+            "rationale": "Both papers aim to improve the quality of generated text by optimizing a task-specific score, which is the main goal of the proposed approach in both papers.",
+            "answer": "To improve the quality of generated text by optimizing a task-specific score."
+        },
+        {
+            "question": "How do both papers relate to Reinforcement Learning (RL)?",
+            "score": "2",
+            "rationale": "Both papers take inspiration from RL, with the CURRENT PAPER using a Distributional Approach and the CITED PAPER using an Actor-Critic Algorithm, which are both related to RL.",
+            "answer": "Both papers take inspiration from RL, with the CURRENT PAPER using a Distributional Approach and the CITED PAPER using an Actor-Critic Algorithm."
+        },
+        {
+            "question": "What type of constraints do both papers aim to optimize?",
+            "score": "2",
+            "rationale": "Both papers aim to optimize task-specific scores, such as BLEU or ROUGE, which are related to the quality of generated text.",
+            "answer": "Task-specific scores, such as BLEU or ROUGE, which are related to the quality of generated text."
+        }
+    ]
+}

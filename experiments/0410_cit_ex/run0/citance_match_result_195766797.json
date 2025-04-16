@@ -1,0 +1,39 @@
+{
+    "authors": [
+        {
+            "authorId": "3106683",
+            "name": "Natasha Jaques"
+        },
+        {
+            "authorId": "2214185",
+            "name": "Asma Ghandeharioun"
+        },
+        {
+            "authorId": "40385687",
+            "name": "Judy Hanwen Shen"
+        },
+        {
+            "authorId": "145727063",
+            "name": "Craig Ferguson"
+        },
+        {
+            "authorId": "2677488",
+            "name": "\u00c0gata Lapedriza"
+        },
+        {
+            "authorId": "49522657",
+            "name": "Noah J. Jones"
+        },
+        {
+            "authorId": "2046135",
+            "name": "S. Gu"
+        },
+        {
+            "authorId": "1719389",
+            "name": "Rosalind W. Picard"
+        }
+    ],
+    "year": 2019,
+    "title": "Way Off-Policy Batch Deep Reinforcement Learning of Implicit Human Preferences in Dialog",
+    "corpusId": 195766797
+}

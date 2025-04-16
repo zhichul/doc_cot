@@ -1,0 +1,20 @@
+{
+    "thought_process": "To identify connections between the two papers, we first need to understand the main topics and contributions of each paper. The current paper proposes a distributional approach to controlled text generation, which involves specifying constraints on the target language model and minimizing the KL divergence from the initial model distribution. The cited paper discusses sequence level training with recurrent neural networks for text generation tasks, such as machine translation, summarization, and image captioning. It proposes a novel training algorithm called MIXER, which combines cross-entropy loss and reinforcement learning to optimize the model for the desired evaluation metric, such as BLEU or ROUGE.",
+    "connections": [
+        {
+            "connection": "Both papers deal with text generation and language models, but from different perspectives. The current paper focuses on controlled text generation with constraints, while the cited paper explores sequence level training for various text generation tasks.",
+            "score": "1",
+            "rationale": "This connection is superficial because both papers are related to text generation, but they tackle different aspects of the problem. Many papers in the field of natural language processing could be connected in this way."
+        },
+        {
+            "connection": "The concept of exposure bias, mentioned in the cited paper, is also relevant to the current paper. Exposure bias occurs when a model is trained on a different distribution of inputs than what it will encounter at test time. The current paper's approach to controlled text generation may help mitigate exposure bias by generating text that is more diverse and less likely to suffer from degeneration.",
+            "score": "2",
+            "rationale": "This connection touches the core of the relationship between the two papers, as both papers deal with the challenges of training language models for text generation tasks. The concept of exposure bias is a key challenge in text generation, and the current paper's approach may help address this issue."
+        },
+        {
+            "connection": "The use of reinforcement learning in the cited paper, specifically the MIXER algorithm, is related to the current paper's use of a KL-adaptive version of the Distributional Policy Gradient (DPG) algorithm. Both papers use reinforcement learning to optimize the model for a desired objective, such as BLEU or ROUGE in the cited paper, and constraint satisfaction in the current paper.",
+            "score": "2",
+            "rationale": "This connection is significant because both papers use reinforcement learning to optimize their models, but for different objectives. The current paper's use of a KL-adaptive version of DPG is similar in spirit to the MIXER algorithm, which combines cross-entropy loss and reinforcement learning."
+        }
+    ]
+}

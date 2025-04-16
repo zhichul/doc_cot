@@ -1,0 +1,18 @@
+{
+    "match": {
+        "authors": "I. Csisz\u00e1r, P. Shields",
+        "year": 2004,
+        "title": "Information Theory and Statistics: A Tutorial",
+        "corpusId": 31495396
+    },
+    "citance": {
+        "citation": {
+            "literal": "(Csisz\u00e1r & Shields, 2004)",
+            "type": "name_year",
+            "paper": null
+        },
+        "context": "The advantage of this version of the connection between Generalized Maximum Entropy and Exponential Families is its generality, which distinguishes it from other presentations, and which makes it ideal for unified application to pointwise, distributional or hybrid constraints. Our statement of Theorem 1 is actually a reformulation of two results in section 3 of Csisz\u00e1r & Shields (2004).",
+        "score": null,
+        "qa_pairs": []
+    }
+}

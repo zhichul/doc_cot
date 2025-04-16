@@ -1,0 +1,38 @@
+{
+    "thought_process": "To contextualize the current paper on controlled text generation, we need to consider the related work on language models, reinforcement learning, and energy-based models. The paper's key contribution is a distributional approach to controlled text generation, which allows for both pointwise and distributional constraints. This approach is compared to existing methods such as REINFORCE, ZIEGLER, and PPLM, which have limitations in terms of degeneration, diversity, and controllability. The paper also draws on concepts from information geometry and energy-based models to formalize the problem of controlled text generation. Therefore, the most important prior work to consider includes papers on language models, reinforcement learning, energy-based models, and information geometry.",
+    "citances": [
+        {
+            "citance": "However, such an optimization process is not infallible; Liu et al. (2016a) noted that it often leads to \"degeneration\", producing poor examples that improve the average reward but forgo coherence and fluency.",
+            "score": "2",
+            "rationale": "This citance is important because it highlights a key challenge in controlled text generation, namely degeneration, and references a specific paper that discusses this issue.",
+            "citation": {
+                "format": "name_year",
+                "content": "Liu et al. (2016a)",
+                "corpusId": "9197196",
+                "paperId": "129cbad01be98ee88a930e31898cb76be79c41c1"
+            }
+        },
+        {
+            "citance": "We follow Csisz\u00e1r & Shields (2004) on this question, a problem that is at the core of the field of Information Geometry (Nielsen, 2018; Amari & Nagaoka, 2000).",
+            "score": "2",
+            "rationale": "This citance is important because it references a key paper in information geometry and highlights the connection between the current paper and the field of information geometry.",
+            "citation": {
+                "format": "name_year",
+                "content": "Csisz\u00e1r & Shields (2004)",
+                "corpusId": "31495396",
+                "paperId": "504449b7233565b1b09fc5b7f8aadd7df6fafc63"
+            }
+        },
+        {
+            "citance": "P (x) is an unnormalized distribution, aka an Energy-Based Model (EBM) (Hinton, 2002; LeCun et al., 2006; Bakhtin et al., 2020), of which p(x) = 1/Z P (x) is the normalized version, where Z .= \u2211 x P (x) is the partition function of P .",
+            "score": "2",
+            "rationale": "This citance is important because it references key papers on energy-based models and highlights the connection between the current paper and the field of energy-based models.",
+            "citation": {
+                "format": "name_year",
+                "content": "Hinton (2002); LeCun et al. (2006); Bakhtin et al. (2020)",
+                "corpusId": "207596505",
+                "paperId": "52070af952474cf13ecd015d42979373ff7c1c00"
+            }
+        }
+    ]
+}
