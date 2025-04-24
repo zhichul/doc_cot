@@ -1,6 +1,8 @@
 from concurrent.futures import ThreadPoolExecutor
 import dataclasses
 import os
+
+import tqdm
 from .base import Lookup
 from datasets import load_dataset
 from dotenv import load_dotenv
@@ -18,7 +20,7 @@ class Pes2oLookup(Lookup):
     def __init__(self, pes2o_path=default_pes2o_path, index_path=default_index_path, lazy=True):
         indices = load_dataset('parquet', data_files=default_index_path)['train'].to_list()
         pes2o_lookup = {}
-        for row in indices:
+        for row in tqdm.tqdm(indices):
             file = row['file']
             for j, id in enumerate(row['corpus_ids']):
                 pes2o_lookup[str(id)] = (file, j)
@@ -38,6 +40,8 @@ class Pes2oLookup(Lookup):
     def get_doc(self, id: int|str, as_obj=False):
         if isinstance(id, int):
             id = str(id)
+        if id not in self: 
+            return None
         file, idx = self.pes2o_lookup[id]
         if file not in self.dats:
             self.dats[file] = load_dataset('json', data_files=os.path.join(self.pes2o_path, file), split='train')
@@ -46,6 +50,14 @@ class Pes2oLookup(Lookup):
             return Pes2oPaper(**paper)
         return paper
 
+    def get_docs(self, ids: list[int|str], as_obj=False, max_workers=4):
+        futs = []
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            for id in ids:
+                futs.append(pool.submit(self.get_doc, id, as_obj=as_obj))
+        for fut in futs:
+            yield fut.result()
+        
     def __contains__(self, id):
         if isinstance(id, int):
             id = str(id)

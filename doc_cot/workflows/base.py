@@ -3,6 +3,11 @@ import dataclasses
 import os
 import addict
 
+class DictNoDefault(addict.Dict):
+    def __missing__(self, key):
+        raise KeyError(key)
+
+
 def parse_name(s):
     parts = s.rsplit('_', 2)  # split from the right, max 2 splits
     if len(parts) != 3:
@@ -72,7 +77,7 @@ def load_prompts(prompt_dir = os.path.join(os.path.dirname(__file__), 'prompts')
                 dir = path[:-2]
                 module = namespace_at_path(prompts, dir)
                 update_defaults(module, prompt)
-    return prompts
+    return DictNoDefault(prompts)
 
 prompts = load_prompts()
 

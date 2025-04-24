@@ -8,7 +8,7 @@ import tqdm
 load_dotenv()
 
 S2_API_KEY = os.environ['S2_API_KEY']
-REQUEST_WAIT=1.0
+REQUEST_WAIT=1.5
 default_fields = ['paperId', 'title', 'corpusId']
 default_reference_fields = default_fields + ['contexts']
 def wait_after(seconds):
@@ -38,9 +38,9 @@ def _get_papers_by_ids_with_session(session: Session, ids: list[str], fields: li
 def get_papers_by_ids(ids: list[str], fields: list[str]=default_fields, session: Session=None, **kwargs) -> list[dict]:
     if session is None:
         with Session() as session:
-            _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
+            return _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
     else:
-        _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
+        return _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
 
 def _get_papers_by_ids_batched(ids: list[str], batch_size: int = 100, **kwargs):
     # use a session to reuse the same TCP connection
@@ -82,23 +82,24 @@ def get_papers_by_title(titles: list[str], fields: list[str]=default_fields, **k
     return results
 
 @wait_after(REQUEST_WAIT)
-def _get_bibs_by_id_with_session(session: Session, id: str, offset: int=0, limit: int=100, fields: list[str] = default_fields,  **kwargs):
+def _get_links_by_id_with_session(session: Session, id: str, get_keyword: str, offset: int=0, limit: int=100, fields: list[str] = default_fields,  **kwargs):
     params = {'fields': ','.join(fields), **kwargs, 'offset': offset, 'limit': limit}
     headers = {'X-API-KEY': S2_API_KEY}
-    with session.get(f'https://api.semanticscholar.org/graph/v1/paper/CorpusId:{id}/references',
+    print(headers)
+    with session.get(f'https://api.semanticscholar.org/graph/v1/paper/CorpusId:{id}/{get_keyword}',
                        params=params,
                        headers=headers
                        ) as response:
         response.raise_for_status()
         return response.json()
 
-def _get_bibs_by_id_batched(id, batch_size: int = 100, **kwargs):
+def _get_links_by_id_batched(id, get_keyword: str, batch_size: int = 100, **kwargs):
     # use a session to reuse the same TCP connection
     with Session() as session:
         # take advantage of S2 batch paper endpoint
         offset = 0
         while offset is not None:
-            result = _get_bibs_by_id_with_session(session, id, offset, batch_size, **kwargs)
+            result = _get_links_by_id_with_session(session, id, get_keyword, offset, batch_size, **kwargs)
             offset = result.get('next', None)
             yield from result['data']
 
@@ -108,7 +109,15 @@ class DictNoDefault(addict.Dict):
 
 def get_bibs_by_id_batched(id:str, fields: list[str]=default_reference_fields, batch_size: int = 100, as_addict=False, **kwargs):
     results = []
-    for result in tqdm.tqdm(_get_bibs_by_id_batched(id, fields=fields, batch_size=batch_size, **kwargs)):
+    for result in tqdm.tqdm(_get_links_by_id_batched(id, get_keyword='references', fields=fields, batch_size=batch_size, **kwargs)):
+        results.append(result)
+    if as_addict:
+        return [DictNoDefault(res) for res in results]
+    return results
+
+def get_cites_by_id_batched(id:str, fields: list[str]=default_reference_fields, batch_size: int = 100, as_addict=False, **kwargs):
+    results = []
+    for result in tqdm.tqdm(_get_links_by_id_batched(id, get_keyword='citations', fields=fields, batch_size=batch_size, **kwargs)):
         results.append(result)
     if as_addict:
         return [DictNoDefault(res) for res in results]
