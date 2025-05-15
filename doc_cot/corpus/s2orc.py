@@ -24,10 +24,18 @@ def split(items: list[any], batch_size: int):
     return [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
 
 @wait_after(REQUEST_WAIT)
-def _get_papers_by_ids_with_session(session: Session, ids: list[str], fields: list[str] = default_fields,  **kwargs):
+def _get_papers_by_ids_with_session(session: Session, ids: list[str], fields: list[str] = default_fields, id_type='corpus', **kwargs):
     params = {'fields': ','.join(fields), **kwargs}
     headers = {'X-API-KEY': S2_API_KEY}
-    body = {'ids': [f'CorpusId:{id}' for id in ids]}
+    full_ids = []
+    for id in ids:
+        if id_type == 'corpus':
+            full_ids.append(f'CorpusId:{id}')
+        elif id_type == 'paper':
+            full_ids.append(id)
+        else:
+            raise NotImplementedError
+    body = {'ids': full_ids}
     with session.post('https://api.semanticscholar.org/graph/v1/paper/batch',
                        params=params,
                        headers=headers,
@@ -35,12 +43,12 @@ def _get_papers_by_ids_with_session(session: Session, ids: list[str], fields: li
         response.raise_for_status()
         return response.json()
 
-def get_papers_by_ids(ids: list[str], fields: list[str]=default_fields, session: Session=None, **kwargs) -> list[dict]:
+def get_papers_by_ids(ids: list[str], fields: list[str]=default_fields, session: Session=None, id_type='corpus', **kwargs) -> list[dict]:
     if session is None:
         with Session() as session:
-            return _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
+            return _get_papers_by_ids_with_session(session, ids, fields=fields, id_type=id_type, **kwargs)
     else:
-        return _get_papers_by_ids_with_session(session, ids, fields=fields, **kwargs)
+        return _get_papers_by_ids_with_session(session, ids, fields=fields, id_type=id_type, **kwargs)
 
 def _get_papers_by_ids_batched(ids: list[str], batch_size: int = 100, **kwargs):
     # use a session to reuse the same TCP connection
@@ -49,7 +57,7 @@ def _get_papers_by_ids_batched(ids: list[str], batch_size: int = 100, **kwargs):
         for ids_batch in split(ids, batch_size):
             yield from _get_papers_by_ids_with_session(session, ids_batch, **kwargs)
 
-def get_papers_by_ids_batched(ids, fields: list[str]=default_fields, batch_size: int = 100, **kwargs):
+def get_papers_by_ids_batched(ids, fields: list[str]=default_fields, batch_size: int = 100, id_type='corpus', **kwargs):
     results = []
     for result in tqdm.tqdm(_get_papers_by_ids_batched(ids, fields=fields, batch_size=batch_size, **kwargs), total=len(ids)):
         results.append(result)

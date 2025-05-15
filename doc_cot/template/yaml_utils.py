@@ -2,8 +2,7 @@ from __future__ import annotations
 
 from ruamel.yaml import YAML
 from .interpolate import interpolate
-
-yaml = YAML()
+import yaml
 
 def load_single(s: str=None, file: str=None, interpolation_args=None):
     if s is None:
@@ -11,4 +10,4 @@ def load_single(s: str=None, file: str=None, interpolation_args=None):
             s = f.read()
     if interpolation_args is not None:
         s = interpolate(s, interpolation_args)
-    return yaml.load(s)
+    return yaml.safe_load(s)
