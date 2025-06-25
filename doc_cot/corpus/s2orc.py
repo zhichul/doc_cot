@@ -1,3 +1,5 @@
+from pathlib import Path
+import sys
 import time
 from requests import Session
 from dotenv import load_dotenv

@@ -3,13 +3,14 @@ from concurrent.futures import ThreadPoolExecutor
 import dataclasses
 import os
 from pathlib import Path
+import sys
 
 import tqdm
 from .base import Lookup
 from datasets import load_dataset
 from dotenv import load_dotenv
 
-print(Path(__file__).resolve().parent.parent.parent / '.env')
+print(Path(__file__).resolve().parent.parent.parent / '.env', file=sys.stderr)
 load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / '.env')
 
 default_wikipath = os.environ['WIKI_PATH']
