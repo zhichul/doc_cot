@@ -5,7 +5,8 @@ import os
 import addict
 import tqdm
 
-load_dotenv()
+print(Path(__file__).resolve().parent.parent.parent / '.env', file=sys.stderr)
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / '.env')
 
 S2_API_KEY = os.environ['S2_API_KEY']
 REQUEST_WAIT=1.5

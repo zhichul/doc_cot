@@ -1,13 +1,16 @@
 from concurrent.futures import ThreadPoolExecutor
 import dataclasses
 import os
+from pathlib import Path
+import sys
 
 import tqdm
 from .base import Lookup
 from datasets import load_dataset
 from dotenv import load_dotenv
 
-load_dotenv()
+print(Path(__file__).resolve().parent.parent.parent / '.env', file=sys.stderr)
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / '.env')
 
 default_pes2o_path = os.environ['PES2O_PATH']
 default_index_path = os.path.join(

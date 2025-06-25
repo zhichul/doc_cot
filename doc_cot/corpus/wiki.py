@@ -2,15 +2,17 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 import dataclasses
 import os
+from pathlib import Path
 
 import tqdm
 from .base import Lookup
 from datasets import load_dataset
 from dotenv import load_dotenv
 
-load_dotenv()
+print(Path(__file__).resolve().parent.parent.parent / '.env')
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / '.env')
 
-default_wikipath = os.environ['WIKIPATH']
+default_wikipath = os.environ['WIKI_PATH']
 default_index_path = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     'indices',
@@ -40,7 +42,7 @@ class WikiLookup(Lookup):
 
     def get_doc(self, id: str, as_obj=False):
         if id not in self: 
-            return None
+            return []
         file_indices = self.wikilookup[id]
         pages = []
         for file, idx in file_indices:
