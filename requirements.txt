@@ -2,3 +2,4 @@ addict
 fuzzysearch
 requests
 python-dotenv
+tqdm
