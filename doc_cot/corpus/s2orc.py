@@ -10,7 +10,8 @@ import tqdm
 print(Path(__file__).resolve().parent.parent.parent / '.env', file=sys.stderr)
 load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / '.env')
 
-S2_API_KEY = os.environ['S2_API_KEY']
+S2_API_KEY = os.environ.get('S2_API_KEY', None)
+print('s2 api key', S2_API_KEY)
 REQUEST_WAIT=1.5
 default_fields = ['paperId', 'title', 'corpusId']
 default_reference_fields = default_fields + ['contexts']
@@ -29,7 +30,7 @@ def split(items: list[any], batch_size: int):
 @wait_after(REQUEST_WAIT)
 def _get_papers_by_ids_with_session(session: Session, ids: list[str], fields: list[str] = default_fields, id_type='corpus', **kwargs):
     params = {'fields': ','.join(fields), **kwargs}
-    headers = {'X-API-KEY': S2_API_KEY}
+    headers = {} if S2_API_KEY is None else {'X-API-KEY': S2_API_KEY}
     full_ids = []
     for id in ids:
         if id_type == 'corpus':
@@ -68,7 +69,8 @@ def get_papers_by_ids_batched(ids, fields: list[str]=default_fields, batch_size:
 
 @wait_after(REQUEST_WAIT)
 def _get_paper_by_title_with_session(session: Session, title: str, fields: list[str]=default_fields, **kwargs):
-    headers = {'X-API-KEY': S2_API_KEY}
+    headers = {} if S2_API_KEY is None else {'X-API-KEY': S2_API_KEY}
+
     params = {'query': title, 'fields': ','.join(fields), **kwargs}
     with session.get('https://api.semanticscholar.org/graph/v1/paper/search/match', params=params, headers=headers) as response:
                 if response.status_code == 404:
@@ -95,8 +97,7 @@ def get_papers_by_title(titles: list[str], fields: list[str]=default_fields, **k
 @wait_after(REQUEST_WAIT)
 def _get_links_by_id_with_session(session: Session, id: str, get_keyword: str, offset: int=0, limit: int=100, fields: list[str] = default_fields,  **kwargs):
     params = {'fields': ','.join(fields), **kwargs, 'offset': offset, 'limit': limit}
-    headers = {'X-API-KEY': S2_API_KEY}
-    print(headers)
+    headers = {} if S2_API_KEY is None else {'X-API-KEY': S2_API_KEY}
     with session.get(f'https://api.semanticscholar.org/graph/v1/paper/CorpusId:{id}/{get_keyword}',
                        params=params,
                        headers=headers
